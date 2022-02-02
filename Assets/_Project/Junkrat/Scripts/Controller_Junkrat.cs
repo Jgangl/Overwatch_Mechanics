@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Controller_Junkrat : MonoBehaviour
 {
-    [SerializeField] private Junkrat_Grenade _grenadePrefab;
+    [SerializeField] private GameObject _grenadePrefab;
     [SerializeField] private Transform _grenadeSpawnPoint;
     [SerializeField] private GameObject _minePrefab;
 
@@ -46,7 +46,7 @@ public class Controller_Junkrat : MonoBehaviour
 
     void Fire()
     {
-        Junkrat_Grenade grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
+        GameObject grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
     }
 
     void ThrowMine()
