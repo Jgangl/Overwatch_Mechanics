@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Junkrat_Mine : MonoBehaviour
@@ -6,39 +8,49 @@ public class Junkrat_Mine : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _damageRadius;
     [SerializeField] private float _explosionForce;
+    [SerializeField] private Vector3 _startTorque;
     private Rigidbody _rb;
-    private Collider _collider;
+    private Collider[] _colliders;
+    //private Collider _collider;
 
     private Camera _mainCam;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _collider = GetComponent<Collider>();
+        _colliders = GetComponentsInChildren<Collider>();
+        //_collider = GetComponent<Collider>();
         _mainCam = Camera.main;
     }
 
     private void Start()
     {
         _rb.AddForce(_mainCam.transform.forward * _speed);
+        _rb.AddRelativeTorque(_startTorque);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.transform.root.tag == "Player") return;
-
-        transform.parent = collision.transform;
+        if (collision.gameObject.transform.root.tag == "Player" || collision.gameObject.layer != LayerMask.NameToLayer("Environment")) return;
+        
         _rb.isKinematic = true;
 
         ContactPoint hitPoint = collision.contacts[0];
 
         transform.up = hitPoint.normal;
 
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, -transform.up, out hit))
+        RaycastHit[] hits = Physics.RaycastAll(transform.position, -transform.up, 1f);
+
+        List<RaycastHit> hitsSorted = hits.OrderBy(
+                                x => Vector2.Distance(transform.position,x.point)
+                            ).ToList();
+        
+        foreach (RaycastHit hit in hitsSorted)
         {
+            if (IsSelfCollider(hit.collider)) continue;
+
             transform.position = hit.point;
-            transform.position += transform.TransformDirection (new Vector3(0f, _collider.bounds.extents.y, 0f));
+            break;
         }
     }
 
@@ -77,5 +89,16 @@ public class Junkrat_Mine : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _damageRadius);
+    }
+
+    private bool IsSelfCollider(Collider col)
+    {
+        foreach (Collider colSelf in _colliders)
+        {
+            if (col == colSelf)
+                return true;
+        }
+
+        return false;
     }
 }
