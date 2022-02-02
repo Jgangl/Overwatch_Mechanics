@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3764321554557620797}
   m_RootOrder: 1
@@ -48,10 +49,11 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160525331349380241}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -125,13 +127,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4572946027286399111}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8178612906615992795}
   - {fileID: 160525331349380242}
-  - {fileID: 2995850374831547441}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,8 +182,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 513
   CinemachineCameraTarget: {fileID: 8178612906615992796}
-  TopClamp: 90
-  BottomClamp: -90
+  TopClamp: 60
+  BottomClamp: -75
 --- !u!114 &6023055936255124087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -328,10 +330,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 786046a08b9f9a44ea37d972618bc00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _grenadePrefab: {fileID: 6279268418012847200, guid: 165346b2004ffd443ab5359b32bfa4ca, type: 3}
-  _grenadeSpawnPoint: {fileID: 2995850374831547441}
-  _minePrefab: {fileID: -1787861765862409879, guid: 7c44d085dbd56cf4aa8fd2e7c81cb4a1, type: 3}
+  _grenadePrefab: {fileID: 2906731291042604859, guid: aea96e3367f917f44b2cefedb715ba6b, type: 3}
+  _grenadeSpawnPoint: {fileID: 0}
+  _minePrefab: {fileID: 1016574678651086971, guid: 7c44d085dbd56cf4aa8fd2e7c81cb4a1, type: 3}
   maxNumMines: 2
+  _mass: 50
 --- !u!1 &8178612906615992796
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,37 +361,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1.375, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3764321554557620797}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &9140298410584910228
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2995850374831547441}
-  m_Layer: 8
-  m_Name: Grenade_SpawnPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2995850374831547441
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9140298410584910228}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.348, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3764321554557620797}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
