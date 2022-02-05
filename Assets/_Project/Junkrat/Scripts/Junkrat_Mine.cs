@@ -9,6 +9,7 @@ public class Junkrat_Mine : MonoBehaviour
     [SerializeField] private float _damageRadius;
     [SerializeField] private float _explosionForce;
     [SerializeField] private Vector3 _startTorque;
+    [SerializeField] private GameObject _explosionVFX;
     private Rigidbody _rb;
     private Collider[] _colliders;
     //private Collider _collider;
@@ -80,6 +81,9 @@ public class Junkrat_Mine : MonoBehaviour
                 }
             }
         }
+
+        GameObject explosionVFX = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
+        Destroy(explosionVFX, 5f);
         // Grenade particles
         // Grenade sound
         Destroy(gameObject);
