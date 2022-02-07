@@ -12,28 +12,34 @@ public class Controller_Junkrat : MonoBehaviour
     [SerializeField] private Transform _mineSpawnPoint;
     [SerializeField] private GameObject _minePrefab;
 
-    [SerializeField] private int maxNumMines;
+    [SerializeField] private int _maxNumMines = 2;
+    [SerializeField] private float _mineRechargeTime = 5f;
+    private int _numAvailableMines;
+    private float _currentMineRechargeTime;
+    private float _currentMineRechargePercent;
 
     [SerializeField] private float _mass = 3f;
 
     private CharacterController _charController;
-    
-    private Queue<Junkrat_Mine> _currentMines = new Queue<Junkrat_Mine>();
-    private Vector3 impact;
-    private bool allowGrenadeFiring = true;
+
+    private Junkrat_Mine _currentMine;
+    private Vector3 _impact;
+    private bool _allowGrenadeFiring = true;
+    private bool _canThrowMine = true;
 
     private void Awake()
     {
         _charController = GetComponent<CharacterController>();
+        _numAvailableMines = _maxNumMines;
     }
 
     private void Update()
     {
-        if (impact.magnitude > 0.2) 
-            _charController.Move(impact * Time.deltaTime);
+        if (_impact.magnitude > 0.2) 
+            _charController.Move(_impact * Time.deltaTime);
 
         // consumes the impact energy each cycle:
-        impact = Vector3.Lerp(impact, Vector3.zero, 4*Time.deltaTime);
+        _impact = Vector3.Lerp(_impact, Vector3.zero, 4*Time.deltaTime);
     }
 
     public void AddImpact(Vector3 direction, float force)
@@ -44,19 +50,19 @@ public class Controller_Junkrat : MonoBehaviour
         if (direction.y < 0)
             direction.y = -direction.y;
 
-        impact += direction.normalized * force / _mass;
+        _impact += direction.normalized * force / _mass;
     }
 
     IEnumerator FireTimer()
     {
-        allowGrenadeFiring = false;
+        _allowGrenadeFiring = false;
         yield return new WaitForSeconds( 1 / _grenadeFireRate);
-        allowGrenadeFiring = true;
+        _allowGrenadeFiring = true;
     }
 
     void Fire()
     {
-        if (!allowGrenadeFiring) return;
+        if (!_allowGrenadeFiring) return;
         
         GameObject grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
         StartCoroutine(FireTimer());
@@ -64,40 +70,30 @@ public class Controller_Junkrat : MonoBehaviour
 
     void ThrowMine()
     {
+        if (!_canThrowMine) return;
+        
+        // Destroy previous mine if it exists
+        if (_currentMine != null)
+        {
+            Destroy(_currentMine.gameObject);
+        }
+
+        _numAvailableMines -= 1;
+        if (_numAvailableMines <= 0)
+        {
+            _canThrowMine = false;
+        }
+        
         GameObject mineObj = Instantiate(_minePrefab, _mineSpawnPoint.position, _mineSpawnPoint.rotation);
-        Junkrat_Mine mine = mineObj.GetComponentInChildren<Junkrat_Mine>();
-        AddMine(mine);
+        _currentMine = mineObj.GetComponentInChildren<Junkrat_Mine>();
+
+        StartCoroutine(MineRechargeTimer());
     }
 
-    void ExplodeCurrentMines()
+    void ExplodeCurrentMine()
     {
-        for (int i = 0; i < _currentMines.Count; i++)
-        {
-            Junkrat_Mine mineToRemove = _currentMines.Dequeue();
-            RemoveMine(mineToRemove);
-        }
-    }
-
-    private void AddMine(Junkrat_Mine newMine)
-    {
-        int numMines = _currentMines.Count;
-
-        if (numMines < 2)
-        {
-            _currentMines.Enqueue(newMine);
-        }
-        else if (numMines == 2)
-        {
-            Junkrat_Mine mineToRemove = _currentMines.Dequeue();
-            RemoveMine(mineToRemove);
-            
-            _currentMines.Enqueue(newMine);
-        }
-    }
-
-    private void RemoveMine(Junkrat_Mine mineToRemove)
-    {
-        mineToRemove.Explode();
+        _currentMine.Explode();
+        _currentMine = null;
     }
 
     public void OnLeftMouseAbility()
@@ -106,7 +102,7 @@ public class Controller_Junkrat : MonoBehaviour
     }
     public void OnRightMouseAbility()
     {
-        ExplodeCurrentMines();
+        ExplodeCurrentMine();
     }
     public void OnShift_Ability()
     {
@@ -115,5 +111,28 @@ public class Controller_Junkrat : MonoBehaviour
     public void OnE_Ability()
     {
         //sprint = newSprintState;
+    }
+
+    IEnumerator MineRechargeTimer()
+    {
+        _currentMineRechargeTime = _mineRechargeTime;
+        while (_currentMineRechargeTime > 0f)
+        {
+            _currentMineRechargeTime -= Time.deltaTime;
+            _currentMineRechargePercent = _currentMineRechargeTime / _mineRechargeTime;
+            yield return null;
+        }
+
+        _numAvailableMines += 1;
+    }
+
+    public float GetMineRechargePercent()
+    {
+        return _currentMineRechargePercent;
+    }
+    
+    public int GetNumAvailableMines()
+    {
+        return _numAvailableMines;
     }
 }
