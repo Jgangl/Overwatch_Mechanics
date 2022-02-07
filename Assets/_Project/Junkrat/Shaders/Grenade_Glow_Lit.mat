@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5199402769756474571
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 5
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Grenade_Glow_Lit
+  m_Shader: {fileID: -6465566751694194690, guid: a20973faf6ea1eb4583864179d870bc6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 2
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Grenade_Albedo:
+        m_Texture: {fileID: 2800000, guid: bff99f8ce3e955e448cdd30ef47d1e23, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Grenade_Height:
+        m_Texture: {fileID: 2800000, guid: 74887b57a308f334bb17f990ecb4f575, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Grenade_Metallic:
+        m_Texture: {fileID: 2800000, guid: 2f9d5b1f1a9c3f3479f6e657a73e37b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Grenade_Normal:
+        m_Texture: {fileID: 2800000, guid: cfb68b6474d6af949b114aebcaa1cef1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Grenade_Occlusion:
+        m_Texture: {fileID: 2800000, guid: a766f055d8f20b440b5ea9fd566a8572, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_138e4ec5cfd8499cbb3829a1c30ec943_Out_0:
+        m_Texture: {fileID: 2800000, guid: a766f055d8f20b440b5ea9fd566a8572, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_14b97e7fd74b4cfaa73f967a9a983dcd_Out_0:
+        m_Texture: {fileID: 2800000, guid: bff99f8ce3e955e448cdd30ef47d1e23, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_4e3b7ae71e8b41c490856ed496c84942_Out_0:
+        m_Texture: {fileID: 2800000, guid: 2f9d5b1f1a9c3f3479f6e657a73e37b6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_e11af04d10dc4fc38d68adcdcb04f2e2_Out_0:
+        m_Texture: {fileID: 2800000, guid: cfb68b6474d6af949b114aebcaa1cef1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    m_Colors: []
+  m_BuildTextureStacks: []

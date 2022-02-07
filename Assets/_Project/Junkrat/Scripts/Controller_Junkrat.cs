@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class Controller_Junkrat : MonoBehaviour
 {
+    [SerializeField] private float _grenadeFireRate = 1.5f;
     [SerializeField] private GameObject _grenadePrefab;
     [SerializeField] private Transform _grenadeSpawnPoint;
+    [SerializeField] private Transform _mineSpawnPoint;
     [SerializeField] private GameObject _minePrefab;
 
     [SerializeField] private int maxNumMines;
@@ -18,6 +20,7 @@ public class Controller_Junkrat : MonoBehaviour
     
     private Queue<Junkrat_Mine> _currentMines = new Queue<Junkrat_Mine>();
     private Vector3 impact;
+    private bool allowGrenadeFiring = true;
 
     private void Awake()
     {
@@ -28,7 +31,7 @@ public class Controller_Junkrat : MonoBehaviour
     {
         if (impact.magnitude > 0.2) 
             _charController.Move(impact * Time.deltaTime);
-        
+
         // consumes the impact energy each cycle:
         impact = Vector3.Lerp(impact, Vector3.zero, 4*Time.deltaTime);
     }
@@ -44,14 +47,24 @@ public class Controller_Junkrat : MonoBehaviour
         impact += direction.normalized * force / _mass;
     }
 
+    IEnumerator FireTimer()
+    {
+        allowGrenadeFiring = false;
+        yield return new WaitForSeconds( 1 / _grenadeFireRate);
+        allowGrenadeFiring = true;
+    }
+
     void Fire()
     {
+        if (!allowGrenadeFiring) return;
+        
         GameObject grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
+        StartCoroutine(FireTimer());
     }
 
     void ThrowMine()
     {
-        GameObject mineObj = Instantiate(_minePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
+        GameObject mineObj = Instantiate(_minePrefab, _mineSpawnPoint.position, _mineSpawnPoint.rotation);
         Junkrat_Mine mine = mineObj.GetComponentInChildren<Junkrat_Mine>();
         AddMine(mine);
     }

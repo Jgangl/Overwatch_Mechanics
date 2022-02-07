@@ -9,6 +9,8 @@ public class Junkrat_Grenade : MonoBehaviour
     [SerializeField] private float _damageRadius;
     [SerializeField] private float _explosionForce;
     [SerializeField] private float _explosionDelay;
+    [SerializeField] private GameObject _explosionVFX;
+    
     private Rigidbody _rb;
     private Camera _mainCam;
 
@@ -56,6 +58,9 @@ public class Junkrat_Grenade : MonoBehaviour
                 hitRb.AddExplosionForce(_explosionForce, transform.position, _damageRadius);
             }
         }
+        
+        GameObject explosionVFX = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
+        Destroy(explosionVFX, 5f);
         // Mine particles
         // Mine sound
         Destroy(gameObject);
