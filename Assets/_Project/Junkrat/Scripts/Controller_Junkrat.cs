@@ -27,6 +27,9 @@ public class Controller_Junkrat : MonoBehaviour
     private bool _allowGrenadeFiring = true;
     private bool _canThrowMine = true;
 
+    private Coroutine _firstMineRechargeTimer;
+    private Coroutine _secondMineRechargeTimer;
+
     private void Awake()
     {
         _charController = GetComponent<CharacterController>();
@@ -70,7 +73,7 @@ public class Controller_Junkrat : MonoBehaviour
 
     void ThrowMine()
     {
-        if (!_canThrowMine) return;
+        if (!_canThrowMine || _numAvailableMines == 0) return;
         
         // Destroy previous mine if it exists
         if (_currentMine != null)
@@ -79,15 +82,17 @@ public class Controller_Junkrat : MonoBehaviour
         }
 
         _numAvailableMines -= 1;
-        if (_numAvailableMines <= 0)
+
+        if (_numAvailableMines == 1)
         {
-            _canThrowMine = false;
+            // Start recharge timer only if available mines is 1
+            Coroutine mineRechargeTimer = StartCoroutine(MineRechargeTimer());
         }
-        
+
         GameObject mineObj = Instantiate(_minePrefab, _mineSpawnPoint.position, _mineSpawnPoint.rotation);
         _currentMine = mineObj.GetComponentInChildren<Junkrat_Mine>();
 
-        StartCoroutine(MineRechargeTimer());
+
     }
 
     void ExplodeCurrentMine()
@@ -124,6 +129,14 @@ public class Controller_Junkrat : MonoBehaviour
         }
 
         _numAvailableMines += 1;
+        
+        print("Num available mines after recharging: " + _numAvailableMines);
+        
+        // Check num available mines to see if we need to recharge again
+        if (_numAvailableMines == 1)
+        {
+            StartCoroutine(MineRechargeTimer());
+        }
     }
 
     public float GetMineRechargePercent()
