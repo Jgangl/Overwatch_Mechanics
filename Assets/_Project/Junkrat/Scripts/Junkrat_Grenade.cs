@@ -24,7 +24,12 @@ public class Junkrat_Grenade : MonoBehaviour
 
     private void Start()
     {
-        _rb.AddForce(_mainCam.transform.forward * _speed);
+        
+    }
+
+    public void SetInitialVelocity(Vector3 initalDirection)
+    {
+        _rb.AddForce(initalDirection * _speed);
     }
 
     private void OnCollisionEnter(Collision collision)

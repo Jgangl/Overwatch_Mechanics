@@ -8,6 +8,7 @@ TagManager:
   - Grenade
   - Mine
   - Enemy
+  - GunCamera
   layers:
   - Default
   - TransparentFX
