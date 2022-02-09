@@ -30,10 +30,15 @@ public class Controller_Junkrat : MonoBehaviour
     private Coroutine _firstMineRechargeTimer;
     private Coroutine _secondMineRechargeTimer;
 
+    private Camera _gunCamera;
+    private Camera _mainCamera;
+
     private void Awake()
     {
         _charController = GetComponent<CharacterController>();
         _numAvailableMines = _maxNumMines;
+        _gunCamera = GameObject.FindGameObjectWithTag("GunCamera").GetComponent<Camera>();
+        _mainCamera = Camera.main;
     }
 
     private void Update()
@@ -65,10 +70,35 @@ public class Controller_Junkrat : MonoBehaviour
 
     void Fire()
     {
-        if (!_allowGrenadeFiring) return;
+        //if (!_allowGrenadeFiring) return;
         
+        // Calculate grenade direction
+        
+        // Ray out from camera
+        //Vector3 targetPoint = _gunCamera.transform.forward * 5;
+        //Vector3 targetPoint2 = _mainCamera.transform.forward * 10;
+        //Debug.DrawLine(_gunCamera.transform.position, targetPoint, Color.red, 2f);
+        //Debug.DrawLine(_mainCamera.transform.position, targetPoint2, Color.yellow, 1f);
+        //Debug.DrawRay(_mainCamera.transform.position, _mainCamera.transform.forward * 100f, Color.red, 1f);
+        //Debug.DrawRay(_gunCamera.transform.position, _gunCamera.transform.forward, Color.yellow, 1f);
+
+        //Vector3 grenadeDirection = (_grenadeSpawnPoint.position - targetPoint).normalized;
+        //Debug.DrawRay(_grenadeSpawnPoint.position, grenadeDirection * 5f, Color.red, 1f);
+        
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+
+        Vector3 targetPoint = ray.GetPoint(10f);
+        targetPoint.y += 1;
+
+        //GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        //sphere.transform.position = targetPoint;
+        
+        Vector3 grenadeDirection = (targetPoint - _grenadeSpawnPoint.position).normalized;
+        Debug.DrawRay(_grenadeSpawnPoint.position, grenadeDirection * 5f, Color.red, 1f);
+
         GameObject grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
-        StartCoroutine(FireTimer());
+        grenade.GetComponentInChildren<Junkrat_Grenade>().SetInitialVelocity(grenadeDirection);
+        //StartCoroutine(FireTimer());
     }
 
     void ThrowMine()
