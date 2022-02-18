@@ -70,7 +70,7 @@ public class Controller_Junkrat : MonoBehaviour
 
     void Fire()
     {
-        //if (!_allowGrenadeFiring) return;
+        if (!_allowGrenadeFiring) return;
         
         // Calculate grenade direction
         
@@ -90,15 +90,14 @@ public class Controller_Junkrat : MonoBehaviour
         Vector3 targetPoint = ray.GetPoint(10f);
         targetPoint.y += 1;
 
-        //GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        //sphere.transform.position = targetPoint;
-        
         Vector3 grenadeDirection = (targetPoint - _grenadeSpawnPoint.position).normalized;
         Debug.DrawRay(_grenadeSpawnPoint.position, grenadeDirection * 5f, Color.red, 1f);
 
         GameObject grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
         grenade.GetComponentInChildren<Junkrat_Grenade>().SetInitialVelocity(grenadeDirection);
-        //StartCoroutine(FireTimer());
+        StartCoroutine(FireTimer());
+        
+        SoundManager_Junkrat.Instance.PlayGrenadeShoot();
     }
 
     void ThrowMine()
@@ -122,7 +121,7 @@ public class Controller_Junkrat : MonoBehaviour
         GameObject mineObj = Instantiate(_minePrefab, _mineSpawnPoint.position, _mineSpawnPoint.rotation);
         _currentMine = mineObj.GetComponentInChildren<Junkrat_Mine>();
 
-
+        // Play mine throw sound
     }
 
     void ExplodeCurrentMine()
