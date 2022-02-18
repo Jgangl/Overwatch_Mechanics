@@ -127,8 +127,11 @@ public class Controller_Junkrat : MonoBehaviour
 
     void ExplodeCurrentMine()
     {
-        _currentMine.Explode();
-        _currentMine = null;
+        if (_currentMine)
+        {
+            _currentMine.Explode();
+            _currentMine = null;
+        }
     }
 
     public void OnLeftMouseAbility()

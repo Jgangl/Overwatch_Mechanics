@@ -53,6 +53,10 @@ public class Junkrat_Mine : MonoBehaviour
             transform.position = hit.point;
             break;
         }
+        
+        // Play land SFX
+        print("Play beep sound");
+        SoundManager_Junkrat.Instance.PlayBeepTwice();
     }
 
     public void Explode()
