@@ -90,6 +90,8 @@ public class Junkrat_Mine : MonoBehaviour
         Destroy(explosionVFX, 5f);
         // Grenade particles
         // Grenade sound
+        SoundManager_Junkrat.Instance.PlayMineExplode();
+        
         Destroy(gameObject);
     }
 
