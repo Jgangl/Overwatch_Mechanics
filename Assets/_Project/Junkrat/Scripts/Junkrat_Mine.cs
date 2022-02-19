@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,10 +11,13 @@ public class Junkrat_Mine : MonoBehaviour
     [SerializeField] private float _explosionForce;
     [SerializeField] private Vector3 _startTorque;
     [SerializeField] private GameObject _explosionVFX;
+    [SerializeField] private AudioClip _beepClip;
+    [SerializeField] private float _beepTime = 0.175f;
+    [SerializeField] private AudioClip _explosionClip;
+    [SerializeField] private AudioSource _explosionSource;
+    [SerializeField] private AudioSource _beepSource;
     private Rigidbody _rb;
     private Collider[] _colliders;
-    //private Collider _collider;
-
     private Camera _mainCam;
 
     private void Awake()
@@ -54,9 +58,8 @@ public class Junkrat_Mine : MonoBehaviour
             break;
         }
         
-        // Play land SFX
-        print("Play beep sound");
-        SoundManager_Junkrat.Instance.PlayBeepTwice();
+        // Play land SoundFX
+        PlayBeepTwice();
     }
 
     public void Explode()
@@ -88,9 +91,9 @@ public class Junkrat_Mine : MonoBehaviour
 
         GameObject explosionVFX = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
         Destroy(explosionVFX, 5f);
-        // Grenade particles
+
         // Grenade sound
-        SoundManager_Junkrat.Instance.PlayMineExplode();
+        PlayExplosionSound();
         
         Destroy(gameObject);
     }
@@ -110,5 +113,30 @@ public class Junkrat_Mine : MonoBehaviour
         }
 
         return false;
+    }
+    
+    IEnumerator BeepTwiceCoroutine()
+    {
+        PlayBeepOnce();
+        yield return new WaitForSeconds(_beepTime);
+        PlayBeepOnce();
+    }
+
+    public void PlayBeepOnce()
+    {
+        _beepSource.Stop();
+        _beepSource.clip = _beepClip;
+        _beepSource.Play();
+    }
+
+    public void PlayBeepTwice()
+    {
+        StartCoroutine(BeepTwiceCoroutine());
+    }
+    
+    public void PlayExplosionSound()
+    {
+        _explosionSource.clip = _explosionClip;
+        _explosionSource.Play();
     }
 }

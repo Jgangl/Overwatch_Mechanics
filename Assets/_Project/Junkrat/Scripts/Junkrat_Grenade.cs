@@ -10,6 +10,10 @@ public class Junkrat_Grenade : MonoBehaviour
     [SerializeField] private float _explosionForce;
     [SerializeField] private float _explosionDelay;
     [SerializeField] private GameObject _explosionVFX;
+    [SerializeField] private AudioClip _explosionAudioClip;
+    [SerializeField] private AudioClip _fuseAudioClip;
+    [SerializeField] private AudioSource _explosionAudioSource;
+    [SerializeField] private AudioSource _fuseAudioSource;
     
     private Rigidbody _rb;
     private Camera _mainCam;
@@ -20,11 +24,8 @@ public class Junkrat_Grenade : MonoBehaviour
     {
         _rb = GetComponent<Rigidbody>();
         _mainCam = Camera.main;
-    }
 
-    private void Start()
-    {
-        
+        PlayFuseClip();
     }
 
     public void SetInitialVelocity(Vector3 initalDirection)
@@ -66,9 +67,9 @@ public class Junkrat_Grenade : MonoBehaviour
         
         GameObject explosionVFX = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
         Destroy(explosionVFX, 5f);
-        // Mine particles
+
         // Mine sound
-        SoundManager_Junkrat.Instance.PlayGrenadeExplode();
+        PlayExplosionClip();
         
         Destroy(gameObject);
     }
@@ -91,5 +92,19 @@ public class Junkrat_Grenade : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, _damageRadius);
+    }
+
+    private void PlayExplosionClip()
+    {
+        _explosionAudioSource.Stop();
+        _explosionAudioSource.clip = _explosionAudioClip;
+        _explosionAudioSource.Play();
+    }
+    
+    private void PlayFuseClip()
+    {
+        _fuseAudioSource.Stop();
+        _fuseAudioSource.clip = _fuseAudioClip;
+        _fuseAudioSource.Play();
     }
 }
