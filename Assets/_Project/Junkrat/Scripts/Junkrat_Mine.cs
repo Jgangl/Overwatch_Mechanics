@@ -18,13 +18,14 @@ public class Junkrat_Mine : MonoBehaviour
     [SerializeField] private AudioSource _beepSource;
     private Rigidbody _rb;
     private Collider[] _colliders;
+    private MeshRenderer _meshRenderer;
     private Camera _mainCam;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
         _colliders = GetComponentsInChildren<Collider>();
-        //_collider = GetComponent<Collider>();
+        _meshRenderer = GetComponentInChildren<MeshRenderer>();
         _mainCam = Camera.main;
     }
 
@@ -92,10 +93,12 @@ public class Junkrat_Mine : MonoBehaviour
         GameObject explosionVFX = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
         Destroy(explosionVFX, 5f);
 
+        DisableObject();
+        
         // Grenade sound
         PlayExplosionSound();
         
-        Destroy(gameObject);
+        Destroy(gameObject, 1f);
     }
 
     private void OnDrawGizmos()
@@ -113,6 +116,15 @@ public class Junkrat_Mine : MonoBehaviour
         }
 
         return false;
+    }
+    
+    private void DisableObject()
+    {
+        _meshRenderer.enabled = false;
+        foreach (Collider col in _colliders)
+            col.enabled = false;
+        _rb.isKinematic = true;
+        _rb.velocity = Vector3.zero;
     }
     
     IEnumerator BeepTwiceCoroutine()
