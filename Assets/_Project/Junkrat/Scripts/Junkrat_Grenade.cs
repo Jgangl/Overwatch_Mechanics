@@ -12,10 +12,14 @@ public class Junkrat_Grenade : MonoBehaviour
     [SerializeField] private GameObject _explosionVFX;
     [SerializeField] private AudioClip _explosionAudioClip;
     [SerializeField] private AudioClip _fuseAudioClip;
+    [SerializeField] private AudioClip _targetHitAudioClip;
     [SerializeField] private AudioSource _explosionAudioSource;
     [SerializeField] private AudioSource _fuseAudioSource;
+    [SerializeField] private AudioSource _targetHitAudioSource;
     
     private Rigidbody _rb;
+    private Collider _col;
+    private MeshRenderer _meshRenderer;
     private Camera _mainCam;
 
     private bool timerStarted = false;
@@ -23,6 +27,8 @@ public class Junkrat_Grenade : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
+        _col = GetComponent<Collider>();
+        _meshRenderer = GetComponent<MeshRenderer>();
         _mainCam = Camera.main;
 
         PlayFuseClip();
@@ -39,6 +45,7 @@ public class Junkrat_Grenade : MonoBehaviour
 
         if (collision.gameObject.tag == "Enemy")
         {
+            PlayTargetHitClip();
             Explode();
         }
         else
@@ -66,12 +73,16 @@ public class Junkrat_Grenade : MonoBehaviour
         }
         
         GameObject explosionVFX = Instantiate(_explosionVFX, transform.position, Quaternion.identity);
-        Destroy(explosionVFX, 5f);
+        Destroy(explosionVFX, 2f);
 
+        StopAllCoroutines();
+        
+        DisableObject();
+        
         // Mine sound
         PlayExplosionClip();
         
-        Destroy(gameObject);
+        Destroy(gameObject.transform.parent.gameObject, 1f);
     }
 
     private void StartExplosionTimer()
@@ -96,9 +107,22 @@ public class Junkrat_Grenade : MonoBehaviour
 
     private void PlayExplosionClip()
     {
+        _fuseAudioSource.Stop();
+        
         _explosionAudioSource.Stop();
         _explosionAudioSource.clip = _explosionAudioClip;
         _explosionAudioSource.Play();
+    }
+
+    private void DisableObject()
+    {
+        _meshRenderer.enabled = false;
+        _col.enabled = false;
+        _rb.isKinematic = true;
+        _rb.velocity = Vector3.zero;
+        Transform glowParticle = transform.Find("Glow_Particle");
+        if (glowParticle != null)
+            glowParticle.gameObject.SetActive(false);
     }
     
     private void PlayFuseClip()
@@ -106,5 +130,12 @@ public class Junkrat_Grenade : MonoBehaviour
         _fuseAudioSource.Stop();
         _fuseAudioSource.clip = _fuseAudioClip;
         _fuseAudioSource.Play();
+    }
+    
+    private void PlayTargetHitClip()
+    {
+        _targetHitAudioSource.Stop();
+        _targetHitAudioSource.clip = _targetHitAudioClip;
+        _targetHitAudioSource.Play();
     }
 }

@@ -161,9 +161,7 @@ public class Controller_Junkrat : MonoBehaviour
         }
 
         _numAvailableMines += 1;
-        
-        print("Num available mines after recharging: " + _numAvailableMines);
-        
+
         // Check num available mines to see if we need to recharge again
         if (_numAvailableMines == 1)
         {
