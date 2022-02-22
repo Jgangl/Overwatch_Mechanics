@@ -9,6 +9,7 @@ TagManager:
   - Mine
   - Enemy
   - GunCamera
+  - MeiWall
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - UI
   - Gun Layer
   - Environment
-  - 
+  - MeiWall
   - 
   - 
   - 
