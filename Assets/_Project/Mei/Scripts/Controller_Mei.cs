@@ -3,14 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using StarterAssets;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Controller_Mei : MonoBehaviour
 {
     [SerializeField] private float _primaryFireRate = 1f;
-    //[SerializeField] private GameObject _grenadePrefab;
-    //[SerializeField] private Transform _grenadeSpawnPoint;
-    //[SerializeField] private Transform _mineSpawnPoint;
-    //[SerializeField] private GameObject _minePrefab;
+    [SerializeField] private ParticleSystem _primaryParticleSystem;
 
     [SerializeField] private float _wallRechargeTime = 5f;
     private float _currentWallRechargeTime;
@@ -28,7 +26,7 @@ public class Controller_Mei : MonoBehaviour
     private bool _cancelWallBuild = false;
 
     [SerializeField] private Mei_Wall _wallPrefab;
-    [SerializeField] private float _wallDistance = 10f;
+    [SerializeField] private float _wallDistance = 30f;
     [SerializeField] private LayerMask _wallMask;
     private Mei_Wall _meiWall;
 
@@ -47,7 +45,8 @@ public class Controller_Mei : MonoBehaviour
     private void Start()
     {
         _meiWall = Instantiate(_wallPrefab, Vector3.zero, Quaternion.identity);
-        _meiWall.DisableWall();
+        
+        StopFirePrimary();
     }
 
     private void Update()
@@ -60,8 +59,8 @@ public class Controller_Mei : MonoBehaviour
             {
                 if (_wallPrefab)
                 {
-                    _meiWall.transform.position = hit.point;
-                    _meiWall.EnableWall();
+                    _meiWall.SetWallPosition(hit.point);
+                    _meiWall.SetWallRotation(transform.rotation.eulerAngles.y);
                 }
             }
         }
@@ -74,9 +73,9 @@ public class Controller_Mei : MonoBehaviour
         _allowPrimaryFiring = true;
     }
 
-    void Fire()
+    void StartFirePrimary()
     {
-        if (!_allowPrimaryFiring) return;
+        _primaryParticleSystem.Play();
 
         //Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
 
@@ -85,31 +84,33 @@ public class Controller_Mei : MonoBehaviour
 
         //Vector3 grenadeDirection = (targetPoint - _grenadeSpawnPoint.position).normalized;
         //Debug.DrawRay(_grenadeSpawnPoint.position, grenadeDirection * 5f, Color.red, 1f);
-
-        //GameObject grenade = Instantiate(_grenadePrefab, _grenadeSpawnPoint.position, _grenadeSpawnPoint.rotation);
-        //grenade.GetComponentInChildren<Junkrat_Grenade>().SetInitialVelocity(grenadeDirection);
-        StartCoroutine(FireTimer());
-        
-        //SoundManager_Junkrat.Instance.PlayGrenadeShoot();
+    }
+    
+    void StopFirePrimary()
+    {
+        Debug.Log("Stop primary fire");
+        if (_primaryParticleSystem.isPlaying)
+        {
+            
+            _primaryParticleSystem.Stop();
+        }
+    }
+    
+    void FireSecondary()
+    {
     }
 
     void TryBuildWall()
     {
-        if (!_canBuildWall) return;
-        //{
-            // Rotate wall 
-        //};
-
-        _buildingWall = true;
-        
-        
-
-        // Build wall
-
-        //GameObject mineObj = Instantiate(_minePrefab, _mineSpawnPoint.position, _mineSpawnPoint.rotation);
-        //_currentMine = mineObj.GetComponentInChildren<Junkrat_Mine>();
-
-        // Play mine throw sound
+        if (!_buildingWall)
+        {
+            _buildingWall = true;
+            _meiWall.StartGhostBuild();
+        }
+        else
+        {
+            _meiWall.RotateWall();
+        }
     }
 
     void BuildWall()
@@ -123,33 +124,36 @@ public class Controller_Mei : MonoBehaviour
     void CancelWallBuild()
     {
         if (_buildingWall)
-            _meiWall.DisableWall();
-    }
-
-    void ExplodeCurrentMine()
-    {
-        if (_currentMine)
         {
-            _currentMine.Explode();
-            _currentMine = null;
+            _meiWall.StopWallBuild();
+            _buildingWall = false;
         }
     }
 
-    public void OnLeftMouseAbility()
+    public void OnLeftMouseAbility(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            if (_buildingWall)
+                BuildWall();
+            else
+                StartFirePrimary();
+        }
+        else
+        {
+            StopFirePrimary();
+        }
+    }
+    public void OnRightMouseAbility(InputValue value)
     {
         if (_buildingWall)
-            BuildWall();
+            CancelWallBuild();
         else
-            Fire();
-    }
-    public void OnRightMouseAbility()
-    {
-        Debug.Log("Right mosue");
-        CancelWallBuild();
+            FireSecondary();
     }
     public void OnShift_Ability()
     {
-        //ThrowMine();
+        
     }
     public void OnE_Ability()
     {

@@ -8,24 +8,29 @@ public class Mei_Wall : MonoBehaviour
     [SerializeField] private float _wallMaxScale;
     [SerializeField] private float _wallMinScale;
     [SerializeField] private float _wallBuildingTime;
+    [SerializeField] private float _wallTimeoutTime = 2f;
 
     private MeshRenderer _meshRenderer;
     private Collider _col;
+    private Rigidbody _rb;
+
+    private bool _wallRotated = false;
 
     private void Awake()
     {
         _meshRenderer = GetComponentInChildren<MeshRenderer>();
         _col = GetComponentInChildren<Collider>();
-    }
+        _rb = GetComponentInChildren<Rigidbody>();
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        DisableWall();
     }
 
     public void StartBuildingWall()
     {
+        transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
+        _col.enabled = true;
+        //_rb.isKinematic = false;
+        //_rb.useGravity = false;
         StartCoroutine(BuildWallCoroutine());
     }
 
@@ -43,8 +48,33 @@ public class Mei_Wall : MonoBehaviour
             progress += Time.deltaTime;
             yield return null;
         }
+
+        StartCoroutine(WallTimerCoroutine());
+    }
+
+    IEnumerator WallTimerCoroutine()
+    {
+        yield return new WaitForSeconds(_wallTimeoutTime);
+        StopWallBuild();
+    }
+
+    public void StopWallBuild()
+    {
+        _meshRenderer.enabled = false;
+        _col.enabled = false;
+    }
+
+    public void StartGhostBuild()
+    {
+        _meshRenderer.enabled = true;
+        _col.enabled = false;
+
+        // Default wall to not rotated
+        _wallRotated = false;
         
-        //transform.localScale = FinalScale;
+        transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
+        
+        // Show Particles where wall will show up
     }
 
     public void EnableWall()
@@ -57,5 +87,26 @@ public class Mei_Wall : MonoBehaviour
     {
         _meshRenderer.enabled = false;
         _col.enabled = false;
+    }
+
+    public void RotateWall()
+    {
+        _wallRotated = !_wallRotated;
+    }
+
+    public void SetWallPosition(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
+    public void SetWallRotation(float yRot)
+    {
+        if (_wallRotated)
+            yRot += 90f;
+        
+        Vector3 currentWallRotation = transform.rotation.eulerAngles;
+        Vector3 newWallRotation = new Vector3(currentWallRotation.x, yRot, currentWallRotation.z);
+        
+        transform.rotation = Quaternion.Euler(newWallRotation);
     }
 }
