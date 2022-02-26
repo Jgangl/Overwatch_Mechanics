@@ -10,16 +10,16 @@ public class Mei_Wall : MonoBehaviour
     [SerializeField] private float _wallBuildingTime;
     [SerializeField] private float _wallTimeoutTime = 2f;
 
-    private MeshRenderer _meshRenderer;
-    private Collider _col;
+    private MeshRenderer[] _meshRenderers;
+    private Collider[] _colliders;
     private Rigidbody _rb;
 
     private bool _wallRotated = false;
 
     private void Awake()
     {
-        _meshRenderer = GetComponentInChildren<MeshRenderer>();
-        _col = GetComponentInChildren<Collider>();
+        _meshRenderers = GetComponentsInChildren<MeshRenderer>();
+        _colliders = GetComponentsInChildren<Collider>();
         _rb = GetComponentInChildren<Rigidbody>();
 
         DisableWall();
@@ -28,7 +28,7 @@ public class Mei_Wall : MonoBehaviour
     public void StartBuildingWall()
     {
         transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
-        _col.enabled = true;
+        EnableColliders(true);
         //_rb.isKinematic = false;
         //_rb.useGravity = false;
         StartCoroutine(BuildWallCoroutine());
@@ -37,19 +37,29 @@ public class Mei_Wall : MonoBehaviour
     IEnumerator BuildWallCoroutine()
     {
         float progress = 0;
+        float currentBuildingTime = 0f;
 
         float localYScale = _wallMinScale;
      
-        while(progress <= 1)
+        while(currentBuildingTime <= _wallBuildingTime)
         {
+            // Map to wall scale progress from 0 to 1
+
+            progress = map(currentBuildingTime, 0f, _wallBuildingTime, 0f, 1f);
+            
             localYScale = Mathf.Lerp(_wallMinScale, _wallMaxScale, progress);
             //transform.localScale = Vector3.Lerp(, FinalScale, progress);
             transform.localScale = new Vector3(transform.localScale.x, localYScale, transform.localScale.z);
-            progress += Time.deltaTime;
+            currentBuildingTime += Time.deltaTime;
             yield return null;
         }
 
         StartCoroutine(WallTimerCoroutine());
+    }
+    
+    float map(float value, float from1, float to1, float from2, float to2)
+    {
+        return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 
     IEnumerator WallTimerCoroutine()
@@ -60,14 +70,14 @@ public class Mei_Wall : MonoBehaviour
 
     public void StopWallBuild()
     {
-        _meshRenderer.enabled = false;
-        _col.enabled = false;
+        EnableRenderers(false);
+        EnableColliders(false);
     }
 
     public void StartGhostBuild()
     {
-        _meshRenderer.enabled = true;
-        _col.enabled = false;
+        EnableRenderers(true);
+        EnableColliders(false);
 
         // Default wall to not rotated
         _wallRotated = false;
@@ -79,14 +89,14 @@ public class Mei_Wall : MonoBehaviour
 
     public void EnableWall()
     {
-        _meshRenderer.enabled = true;
-        _col.enabled = false;
+        EnableRenderers(true);
+        EnableColliders(false);
     }
 
     public void DisableWall()
     {
-        _meshRenderer.enabled = false;
-        _col.enabled = false;
+        EnableRenderers(false);
+        EnableColliders(false);
     }
 
     public void RotateWall()
@@ -108,5 +118,21 @@ public class Mei_Wall : MonoBehaviour
         Vector3 newWallRotation = new Vector3(currentWallRotation.x, yRot, currentWallRotation.z);
         
         transform.rotation = Quaternion.Euler(newWallRotation);
+    }
+
+    public void EnableRenderers(bool enabled)
+    {
+        foreach (MeshRenderer renderer in _meshRenderers)
+        {
+            renderer.enabled = enabled;
+        }
+    }
+    
+    public void EnableColliders(bool enabled)
+    {
+        foreach (Collider collider in _colliders)
+        {
+            collider.enabled = enabled;
+        }
     }
 }

@@ -88,7 +88,7 @@ public class Controller_Mei : MonoBehaviour
     
     void StopFirePrimary()
     {
-        Debug.Log("Stop primary fire");
+        //Debug.Log("Stop primary fire");
         if (_primaryParticleSystem.isPlaying)
         {
             
