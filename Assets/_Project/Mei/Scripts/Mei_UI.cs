@@ -17,22 +17,18 @@ public class Mei_UI : MonoBehaviour
     [SerializeField] private Image _iceWallInnerIcon;
     [SerializeField] private Image _iceWallAbilityIcon;
     [SerializeField] private TextMeshProUGUI _iceWallCooldownText;
-    
-    //[SerializeField] private Color _minesFullTextColor;
-    //[SerializeField] private Color _minesNotFullTextColor;
 
     private Controller_Mei _playerMei;
+    private Mei_Wall _meiWall;
+
+    private bool _ghostWallBuilding = false;
+    private bool _wallBuilt = false;
     
     private void Start()
     {
         _playerMei = FindObjectOfType<Controller_Mei>();
-
-        //_iceWallAbilityIcon.color = _iceWallAbilityBasicColor;
-        //_iceWallOuterIcon.color = _iceWallBasicOuterIconColor;
-        //_iceWallInnerIcon.color = _iceWallInnerIconColor;
-
-        //_iceWallInnerIcon.gameObject.SetActive(false);
-        //_iceWallCooldownText.gameObject.SetActive(false);
+        _meiWall = FindObjectOfType<Mei_Wall>();
+        _meiWall.OnWallTimeout += OnWallTimeout;
         
         EnableAvailableWall();
     }
@@ -41,9 +37,6 @@ public class Mei_UI : MonoBehaviour
     {
         float wallRechargePercent = _playerMei.GetWallRechargePercent();
         float wallTimeRemaining = _playerMei.GetWallRechargeTimeRemaining();
-
-        print("Wall Recharge Percent: " + wallRechargePercent);
-        print("Wall Time Remaining: " + wallTimeRemaining);
 
         if (Mathf.Approximately(wallRechargePercent, 0f))
         {
@@ -56,6 +49,34 @@ public class Mei_UI : MonoBehaviour
 
         SetFillPercent(wallRechargePercent);
         SetTimeRemainingText(wallTimeRemaining);
+    }
+
+    private void OnWallTimeout()
+    {
+        // Enable cooldown text and fill percent
+        
+        // Move icon to original position
+    }
+    
+    private void OnStartWallBuild()
+    {
+        // Enable selected color
+        
+        // Move icon down and to the right slightly
+    }
+    
+    private void OnStartGhostWallBuild()
+    {
+        // Enable selected color
+        
+        // Move icon down and to the right slightly
+    }
+    
+    private void OnStopGhostWallBuild()
+    {
+        // Enable basic color
+        
+        // Move icon to original position
     }
 
     void SetFillPercent(float perc)
@@ -71,7 +92,6 @@ public class Mei_UI : MonoBehaviour
 
     void EnableAvailableWall()
     {
-        print("Enabling availble wall");
         _iceWallInnerIcon.gameObject.SetActive(false);
 
         _iceWallOuterIcon.color = _iceWallBasicOuterIconColor;
@@ -91,7 +111,7 @@ public class Mei_UI : MonoBehaviour
         
         // Change ability icon color
         _iceWallAbilityIcon.color = _iceWallAbilitySelectedColor;
-        
+
         // Enable cooldown text
         _iceWallCooldownText.gameObject.SetActive(true);
     }
