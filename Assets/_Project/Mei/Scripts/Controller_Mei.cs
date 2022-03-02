@@ -102,6 +102,8 @@ public class Controller_Mei : MonoBehaviour
 
     void TryBuildWall()
     {
+        if (!_canBuildWall) return;
+        
         if (!_buildingWall)
         {
             _buildingWall = true;
@@ -118,7 +120,7 @@ public class Controller_Mei : MonoBehaviour
         _buildingWall = false;
         
         _meiWall.StartBuildingWall();
-        //StartCoroutine(WallRechargeTimer());
+        StartCoroutine(WallRechargeTimer());
     }
 
     void CancelWallBuild()
@@ -162,6 +164,8 @@ public class Controller_Mei : MonoBehaviour
 
     IEnumerator WallRechargeTimer()
     {
+        _canBuildWall = false;
+        
         _currentWallRechargeTime = _wallRechargeTime;
         while (_currentWallRechargeTime > 0f)
         {
@@ -169,10 +173,17 @@ public class Controller_Mei : MonoBehaviour
             _currentWallRechargePercent = _currentWallRechargeTime / _wallRechargeTime;
             yield return null;
         }
+
+        _canBuildWall = true;
     }
 
     public float GetWallRechargePercent()
     {
         return _currentWallRechargePercent;
+    }
+
+    public float GetWallRechargeTimeRemaining()
+    {
+        return _currentWallRechargeTime;
     }
 }
