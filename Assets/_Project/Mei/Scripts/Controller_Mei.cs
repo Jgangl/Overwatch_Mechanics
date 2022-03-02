@@ -23,6 +23,7 @@ public class Controller_Mei : MonoBehaviour
     private bool _allowPrimaryFiring = true;
     private bool _canBuildWall = true;
     private bool _buildingWall = false;
+    private bool _wallBuilt = false;
     private bool _cancelWallBuild = false;
 
     [SerializeField] private Mei_Wall _wallPrefab;
@@ -40,12 +41,12 @@ public class Controller_Mei : MonoBehaviour
         _charController = GetComponent<CharacterController>();
         _gunCamera = GameObject.FindGameObjectWithTag("GunCamera").GetComponent<Camera>();
         _mainCamera = Camera.main;
+        
+        _meiWall = Instantiate(_wallPrefab, Vector3.zero, Quaternion.identity);
     }
 
     private void Start()
     {
-        _meiWall = Instantiate(_wallPrefab, Vector3.zero, Quaternion.identity);
-        
         StopFirePrimary();
     }
 
@@ -118,8 +119,10 @@ public class Controller_Mei : MonoBehaviour
     void BuildWall()
     {
         _buildingWall = false;
+        _wallBuilt = true;
         
         _meiWall.StartBuildingWall();
+        _meiWall.OnWallTimeout += OnWallTimeout;
         StartCoroutine(WallRechargeTimer());
     }
 
@@ -130,6 +133,12 @@ public class Controller_Mei : MonoBehaviour
             _meiWall.StopWallBuild();
             _buildingWall = false;
         }
+    }
+
+    void OnWallTimeout()
+    {
+        _wallBuilt = false;
+        _meiWall.OnWallTimeout -= OnWallTimeout;
     }
 
     public void OnLeftMouseAbility(InputValue value)
@@ -159,7 +168,16 @@ public class Controller_Mei : MonoBehaviour
     }
     public void OnE_Ability()
     {
-        TryBuildWall();
+        if (_wallBuilt)
+        {
+            // Destroy current wall
+            _meiWall.DestroyWall();
+        }
+        else
+        {
+            // Start Ghost build
+            TryBuildWall();
+        }
     }
 
     IEnumerator WallRechargeTimer()
@@ -173,6 +191,10 @@ public class Controller_Mei : MonoBehaviour
             _currentWallRechargePercent = _currentWallRechargeTime / _wallRechargeTime;
             yield return null;
         }
+        
+        // Make sure time and percent are 0 and not below 0
+        _currentWallRechargeTime = 0f;
+        _currentWallRechargePercent = 0f;
 
         _canBuildWall = true;
     }

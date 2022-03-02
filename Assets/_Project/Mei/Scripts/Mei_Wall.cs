@@ -16,6 +16,15 @@ public class Mei_Wall : MonoBehaviour
 
     private bool _wallRotated = false;
 
+    public delegate void WallTimeout();
+    public event WallTimeout OnWallTimeout;
+    public delegate void StartWallBuild();
+    public event StartWallBuild OnStartWallBuild;
+    public delegate void StartGhostWallBuild();
+    public event StartGhostWallBuild OnStartGhostWallBuild;
+    public delegate void StopGhostWallBuild();
+    public event StopGhostWallBuild OnStopGhostWallBuild;
+
     private void Awake()
     {
         _meshRenderers = GetComponentsInChildren<MeshRenderer>();
@@ -65,7 +74,8 @@ public class Mei_Wall : MonoBehaviour
     IEnumerator WallTimerCoroutine()
     {
         yield return new WaitForSeconds(_wallTimeoutTime);
-        StopWallBuild();
+        
+        DestroyWall();
     }
 
     public void StopWallBuild()
@@ -85,6 +95,13 @@ public class Mei_Wall : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
         
         // Show Particles where wall will show up
+    }
+
+    public void DestroyWall()
+    {
+        StopWallBuild();
+
+        OnWallTimeout?.Invoke();
     }
 
     public void EnableWall()

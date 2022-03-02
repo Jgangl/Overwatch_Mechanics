@@ -331,7 +331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _primaryFireRate: 1
-  _wallRechargeTime: 5
+  _primaryParticleSystem: {fileID: 0}
+  _wallRechargeTime: 10
   _mass: 3
   _wallPrefab: {fileID: 8213515656060029124, guid: b30a8d91643ee7c49bec10102af3e70f, type: 3}
   _wallDistance: 10
