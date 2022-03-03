@@ -20,24 +20,35 @@ public class Mei_UI : MonoBehaviour
 
     private Controller_Mei _playerMei;
     private Mei_Wall _meiWall;
+    private Animator _animator;
 
     private bool _ghostWallBuilding = false;
     private bool _wallBuilt = false;
-    
+
+    private void Awake()
+    {
+        _animator = GetComponentInChildren<Animator>();
+    }
+
     private void Start()
     {
         _playerMei = FindObjectOfType<Controller_Mei>();
+        _playerMei.OnWallCooldownFinished += OnWallCooldownFinished;
+        
         _meiWall = FindObjectOfType<Mei_Wall>();
         _meiWall.OnWallTimeout += OnWallTimeout;
+        _meiWall.OnStartWallBuild += OnStartWallBuild;
+        _meiWall.OnStartGhostWallBuild += OnStartGhostWallBuild;
+        _meiWall.OnStopGhostWallBuild += OnStopGhostWallBuild;
         
-        EnableAvailableWall();
+        SetDefaultState();
     }
 
     private void Update()
     {
         float wallRechargePercent = _playerMei.GetWallRechargePercent();
         float wallTimeRemaining = _playerMei.GetWallRechargeTimeRemaining();
-
+/*
         if (Mathf.Approximately(wallRechargePercent, 0f))
         {
             EnableAvailableWall();
@@ -46,37 +57,87 @@ public class Mei_UI : MonoBehaviour
         {
             DisableAvailableWall();
         }
+*/
 
+        // Update Inner Icon Fill with wall cooldown percent
         SetFillPercent(wallRechargePercent);
+        
+        // Update Cooldown remaining text
         SetTimeRemainingText(wallTimeRemaining);
     }
 
     private void OnWallTimeout()
     {
+        /*
         // Enable cooldown text and fill percent
+        EnableCooldownText(true);
+        
+        // Enable inner icon for fill cooldown
+        EnableInnerIcon(true);
+        */
+        
+        SetCooldownState();
         
         // Move icon to original position
+        _animator.SetBool("Selected", false);
     }
     
     private void OnStartWallBuild()
     {
-        // Enable selected color
-        
-        // Move icon down and to the right slightly
+        // No additional functionality needed yet
     }
     
     private void OnStartGhostWallBuild()
     {
+        /*
         // Enable selected color
+        ChangeOuterIconColor(_iceWallSelectedOuterIconColor);
+        
+        // Change ability icon color
+        ChangeAbilityIconColor(_iceWallAbilitySelectedColor);
+        
+        */
+        
+        SetSelectedState();
         
         // Move icon down and to the right slightly
+        _animator.SetBool("Selected", true);
     }
     
     private void OnStopGhostWallBuild()
     {
-        // Enable basic color
+        /*
+        // Enable outer icon basic color
+        ChangeOuterIconColor(_iceWallBasicOuterIconColor);
+        
+        // Enable ability icon basic color
+        ChangeAbilityIconColor(_iceWallAbilityBasicColor);
+        
+        */
+        
+        SetDefaultState();
         
         // Move icon to original position
+        _animator.SetBool("Selected", false);
+    }
+
+    private void OnWallCooldownFinished()
+    {
+        SetDefaultState();
+        
+        /*
+        // Enable basic color
+        ChangeOuterIconColor(_iceWallBasicOuterIconColor);
+        
+        // Disable inner icon
+        EnableInnerIcon(false);
+        
+        // Change Ability icon to basic color
+        ChangeAbilityIconColor(_iceWallAbilityBasicColor);
+        
+        // Disable cooldown text
+        EnableCooldownText(false);
+        */
     }
 
     void SetFillPercent(float perc)
@@ -92,27 +153,82 @@ public class Mei_UI : MonoBehaviour
 
     void EnableAvailableWall()
     {
-        _iceWallInnerIcon.gameObject.SetActive(false);
+        //_iceWallInnerIcon.gameObject.SetActive(false);
 
-        _iceWallOuterIcon.color = _iceWallBasicOuterIconColor;
+        //_iceWallOuterIcon.color = _iceWallBasicOuterIconColor;
 
-        _iceWallAbilityIcon.color = _iceWallAbilityBasicColor;
+        //_iceWallAbilityIcon.color = _iceWallAbilityBasicColor;
         
-        _iceWallCooldownText.gameObject.SetActive(false);
+        //_iceWallCooldownText.gameObject.SetActive(false);
     }
 
     void DisableAvailableWall()
     {
         // Change outer icon color
-        _iceWallOuterIcon.color = _iceWallSelectedOuterIconColor;
+        //ChangeOuterIconColor(_iceWallSelectedOuterIconColor);
         
         // Change inner icon color
-        _iceWallInnerIcon.gameObject.SetActive(true);
+        //_iceWallInnerIcon.gameObject.SetActive(true);
         
         // Change ability icon color
-        _iceWallAbilityIcon.color = _iceWallAbilitySelectedColor;
+        //ChangeAbilityIconColor(_iceWallAbilitySelectedColor);
 
         // Enable cooldown text
-        _iceWallCooldownText.gameObject.SetActive(true);
+        //EnableCooldownText(true);
     }
+
+    void SetDefaultState()
+    {
+        ChangeOuterIconColor(_iceWallBasicOuterIconColor);
+        
+        ChangeAbilityIconColor(_iceWallAbilityBasicColor);
+        
+        EnableCooldownText(false);
+        
+        EnableInnerIcon(false);
+    }
+    
+    void SetSelectedState()
+    {
+        ChangeOuterIconColor(_iceWallSelectedOuterIconColor);
+        
+        ChangeAbilityIconColor(_iceWallAbilitySelectedColor);
+        
+        EnableCooldownText(false);
+        
+        EnableInnerIcon(false);
+    }
+    
+    void SetCooldownState()
+    {
+        ChangeOuterIconColor(_iceWallSelectedOuterIconColor);
+        
+        ChangeAbilityIconColor(_iceWallAbilitySelectedColor);
+        
+        EnableCooldownText(true);
+        
+        EnableInnerIcon(true);
+    }
+
+    void ChangeOuterIconColor(Color newColor)
+    {
+        _iceWallOuterIcon.color = newColor;
+    }
+
+    void EnableInnerIcon(bool enabled)
+    {
+        _iceWallInnerIcon.gameObject.SetActive(enabled);
+    }
+
+    void ChangeAbilityIconColor(Color newColor)
+    {
+        _iceWallAbilityIcon.color = newColor;
+    }
+
+    void EnableCooldownText(bool enabled)
+    {
+        _iceWallCooldownText.gameObject.SetActive(enabled);
+    }
+    
+    
 }

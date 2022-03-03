@@ -10,6 +10,8 @@ public class Mei_Wall : MonoBehaviour
     [SerializeField] private float _wallBuildingTime;
     [SerializeField] private float _wallTimeoutTime = 2f;
 
+    [SerializeField] private GameObject _wallBreakParticles;
+
     private MeshRenderer[] _meshRenderers;
     private Collider[] _colliders;
     private Rigidbody _rb;
@@ -41,6 +43,8 @@ public class Mei_Wall : MonoBehaviour
         //_rb.isKinematic = false;
         //_rb.useGravity = false;
         StartCoroutine(BuildWallCoroutine());
+        
+        OnStartWallBuild?.Invoke();
     }
 
     IEnumerator BuildWallCoroutine()
@@ -78,10 +82,12 @@ public class Mei_Wall : MonoBehaviour
         DestroyWall();
     }
 
-    public void StopWallBuild()
+    public void StopGhostBuild()
     {
         EnableRenderers(false);
         EnableColliders(false);
+        
+        OnStopGhostWallBuild?.Invoke();
     }
 
     public void StartGhostBuild()
@@ -94,14 +100,19 @@ public class Mei_Wall : MonoBehaviour
         
         transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
         
+        OnStartGhostWallBuild?.Invoke();
+        
         // Show Particles where wall will show up
     }
 
     public void DestroyWall()
     {
-        StopWallBuild();
+        StopGhostBuild();
 
         OnWallTimeout?.Invoke();
+
+        GameObject wallBreakParticles = Instantiate(_wallBreakParticles, transform.position, Quaternion.identity);
+        Destroy(wallBreakParticles, 5f);
     }
 
     public void EnableWall()
