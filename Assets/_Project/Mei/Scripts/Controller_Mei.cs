@@ -35,6 +35,9 @@ public class Controller_Mei : MonoBehaviour
 
     private Camera _gunCamera;
     private Camera _mainCamera;
+    
+    public delegate void WallCooldownFinished();
+    public event WallCooldownFinished OnWallCooldownFinished;
 
     private void Awake()
     {
@@ -130,7 +133,7 @@ public class Controller_Mei : MonoBehaviour
     {
         if (_buildingWall)
         {
-            _meiWall.StopWallBuild();
+            _meiWall.StopGhostBuild();
             _buildingWall = false;
         }
     }
@@ -166,6 +169,7 @@ public class Controller_Mei : MonoBehaviour
     {
         
     }
+    
     public void OnE_Ability()
     {
         if (_wallBuilt)
@@ -197,6 +201,8 @@ public class Controller_Mei : MonoBehaviour
         _currentWallRechargePercent = 0f;
 
         _canBuildWall = true;
+        
+        OnWallCooldownFinished?.Invoke();
     }
 
     public float GetWallRechargePercent()

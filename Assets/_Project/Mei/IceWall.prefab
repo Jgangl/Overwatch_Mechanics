@@ -54,6 +54,7 @@ MonoBehaviour:
   _wallMinScale: 0.01
   _wallBuildingTime: 0.35
   _wallTimeoutTime: 5
+  _wallBreakParticles: {fileID: 9179482699365573264, guid: e13ba2536c76734419b93b39c7aaa113, type: 3}
 --- !u!1 &8874506658659048956
 GameObject:
   m_ObjectHideFlags: 0
