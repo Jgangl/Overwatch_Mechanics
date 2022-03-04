@@ -10,13 +10,21 @@ public class Mei_Wall : MonoBehaviour
     [SerializeField] private float _wallBuildingTime;
     [SerializeField] private float _wallTimeoutTime = 2f;
 
-    [SerializeField] private GameObject _wallBreakParticles;
+    [Space(5)]
+    
+    [Header("Effects")] 
+    [SerializeField] private GameObject _breakParticles;
+    [SerializeField] private Vector3 _breakParticlesOffset;
+    [SerializeField] private ParticleSystem[] _frostParticles;
+    [SerializeField] private ParticleSystem[] _ghostSnowParticles;
 
     private MeshRenderer[] _meshRenderers;
     private Collider[] _colliders;
     private Rigidbody _rb;
 
     private bool _wallRotated = false;
+
+    private bool _wallBuilt = false;
 
     public delegate void WallTimeout();
     public event WallTimeout OnWallTimeout;
@@ -36,8 +44,18 @@ public class Mei_Wall : MonoBehaviour
         DisableWall();
     }
 
+    private void Start()
+    {
+        EnableFrostParticles(false);
+        EnableGhostParticles(false);
+    }
+
     public void StartBuildingWall()
     {
+        _wallBuilt = true;
+        
+        EnableRenderers(true);
+        
         transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
         EnableColliders(true);
         //_rb.isKinematic = false;
@@ -49,6 +67,7 @@ public class Mei_Wall : MonoBehaviour
 
     IEnumerator BuildWallCoroutine()
     {
+        EnableFrostParticles(true);
         float progress = 0;
         float currentBuildingTime = 0f;
 
@@ -67,6 +86,8 @@ public class Mei_Wall : MonoBehaviour
             yield return null;
         }
 
+        //EnableFrostParticles(true);
+        
         StartCoroutine(WallTimerCoroutine());
     }
     
@@ -79,12 +100,15 @@ public class Mei_Wall : MonoBehaviour
     {
         yield return new WaitForSeconds(_wallTimeoutTime);
         
-        DestroyWall();
+        if (_wallBuilt)
+            DestroyWall();
     }
 
     public void StopGhostBuild()
     {
-        EnableRenderers(false);
+        EnableGhostParticles(false);
+        
+        //EnableRenderers(false);
         EnableColliders(false);
         
         OnStopGhostWallBuild?.Invoke();
@@ -92,7 +116,9 @@ public class Mei_Wall : MonoBehaviour
 
     public void StartGhostBuild()
     {
-        EnableRenderers(true);
+        EnableGhostParticles(true);
+        
+        //EnableRenderers(true);
         EnableColliders(false);
 
         // Default wall to not rotated
@@ -107,11 +133,16 @@ public class Mei_Wall : MonoBehaviour
 
     public void DestroyWall()
     {
-        StopGhostBuild();
+        _wallBuilt = false;
+        
+        DisableWall();
 
+        EnableFrostParticles(false);
+        EnableGhostParticles(false);
+        
         OnWallTimeout?.Invoke();
 
-        GameObject wallBreakParticles = Instantiate(_wallBreakParticles, transform.position, Quaternion.identity);
+        GameObject wallBreakParticles = Instantiate(_breakParticles, transform.position + _breakParticlesOffset, Quaternion.identity);
         Destroy(wallBreakParticles, 5f);
     }
 
@@ -161,6 +192,28 @@ public class Mei_Wall : MonoBehaviour
         foreach (Collider collider in _colliders)
         {
             collider.enabled = enabled;
+        }
+    }
+
+    private void EnableFrostParticles(bool enabled)
+    {
+        foreach (ParticleSystem particle in _frostParticles)
+        {
+            if (enabled)
+                particle.Play();
+            else
+                particle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+        }
+    }
+
+    private void EnableGhostParticles(bool enabled)
+    {
+        foreach (ParticleSystem particle in _ghostSnowParticles)
+        {
+            if (enabled)
+                particle.Play();
+            else
+                particle.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
         }
     }
 }

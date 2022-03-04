@@ -1,0 +1,1303 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.9f1 (921b45a28ab6) revision 9575237'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Education' Language: 'en' Physical Memory: 16304 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.2.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Users/JoshuaGangl/Documents/UnityProjects/Overwatch_Mechanics
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+64871
+Successfully changed project path to: C:/Users/JoshuaGangl/Documents/UnityProjects/Overwatch_Mechanics
+C:/Users/JoshuaGangl/Documents/UnityProjects/Overwatch_Mechanics
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 82.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.9f1 (921b45a28ab6)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/JoshuaGangl/Documents/UnityProjects/Overwatch_Mechanics/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 Ti (ID=0x1b82)
+    Vendor:   NVIDIA
+    VRAM:     8079 MB
+    Driver:   30.0.14.9709
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56184
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.006671 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 78.09 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.664 seconds
+Domain Reload Profiling:
+	ReloadAssembly (664ms)
+		BeginReloadAssembly (82ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (494ms)
+			LoadAssemblies (79ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (109ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (299ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (78ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (154ms)
+				ProcessInitializeOnLoadMethodAttributes (48ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007496 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 77.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.894 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1894ms)
+		BeginReloadAssembly (118ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1668ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (254ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (86ms)
+			SetupLoadedEditorAssemblies (1196ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (78ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (910ms)
+				ProcessInitializeOnLoadMethodAttributes (82ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.90 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4398 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 47 unused Assets / (1.5 MB). Loaded Objects now: 4855.
+Memory consumption went from 196.5 MB to 195.0 MB.
+Total: 4.753100 ms (FindLiveObjects: 0.445600 ms CreateObjectMapping: 0.111100 ms MarkObjects: 3.732600 ms  DeleteObjects: 0.462600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 29555.327711 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Attempting to get Camera relative temporary RenderTexture (width || height <= 0) via a CommandBuffer  in a Sriptable Render Pipeline.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:ExecuteCommandBuffer_Internal (UnityEngine.Rendering.CommandBuffer)
+UnityEngine.Rendering.ScriptableRenderContext:ExecuteCommandBuffer (UnityEngine.Rendering.CommandBuffer)
+UnityEngine.Rendering.Universal.Internal.CopyColorPass:Execute (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/Passes/CopyColorPass.cs:111)
+UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteRenderPass (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.ScriptableRenderPass,UnityEngine.Rendering.Universal.RenderingData&) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/ScriptableRenderer.cs:966)
+UnityEngine.Rendering.Universal.ScriptableRenderer:ExecuteBlock (int,UnityEngine.Rendering.Universal.ScriptableRenderer/RenderBlocks&,UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/ScriptableRenderer.cs:925)
+UnityEngine.Rendering.Universal.ScriptableRenderer:Execute (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.RenderingData&) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/ScriptableRenderer.cs:729)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:414)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[ line 0]
+
+Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+ -> (artifact id: 'ec2e449de6cd469a14828311787a23d7') in 0.268836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.803525 seconds.
+  path: Assets/PolygonParticleFX/Models/FX_Shard_Rock_Small_01.fbx
+  artifactKey: Guid(2e68dbddeabab79469c7e0ad08418c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Models/FX_Shard_Rock_Small_01.fbx using Guid(2e68dbddeabab79469c7e0ad08418c18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6cc877383a08382b6355b8134b91437') in 0.235537 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006740 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.49 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.430 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1430ms)
+		BeginReloadAssembly (152ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1172ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (79ms)
+			SetupLoadedEditorAssemblies (659ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (461ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.47 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4256 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (1.1 MB). Loaded Objects now: 4938.
+Memory consumption went from 197.6 MB to 196.5 MB.
+Total: 4.808100 ms (FindLiveObjects: 0.456500 ms CreateObjectMapping: 0.139700 ms MarkObjects: 3.961800 ms  DeleteObjects: 0.248100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008010 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.46 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.392 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1393ms)
+		BeginReloadAssembly (156ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1128ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (267ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (76ms)
+			SetupLoadedEditorAssemblies (623ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (423ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4245 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (1.1 MB). Loaded Objects now: 4952.
+Memory consumption went from 196.6 MB to 195.5 MB.
+Total: 4.453200 ms (FindLiveObjects: 0.425400 ms CreateObjectMapping: 0.108900 ms MarkObjects: 3.702400 ms  DeleteObjects: 0.215400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007223 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.448 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1449ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (1197ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (267ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (688ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (89ms)
+				ProcessInitializeOnLoadAttributes (496ms)
+				ProcessInitializeOnLoadMethodAttributes (79ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.23 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4245 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (1.1 MB). Loaded Objects now: 4966.
+Memory consumption went from 196.6 MB to 195.5 MB.
+Total: 8.101600 ms (FindLiveObjects: 1.339900 ms CreateObjectMapping: 0.436100 ms MarkObjects: 5.720000 ms  DeleteObjects: 0.603400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 188.140657 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+ -> (artifact id: '6dc2eea421a9bb947e50a66def32437f') in 0.202772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.785991 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '082b470a0619e24a25a46b20f575eb1c') in 0.013028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.937090 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9bcb5d1eeed6d04b78d7436a1b3570e3') in 0.012842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.592108 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6d36bb6a4ea3ea50a291d7950fbdc4c') in 0.012782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.637581 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99e5ca8e4f2888b41769ebba4733ed83') in 0.014637 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.470961 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6a59d39d2c1536788673a17fe13c2e') in 0.016112 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006919 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.04 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.425 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1426ms)
+		BeginReloadAssembly (159ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1157ms)
+			LoadAssemblies (86ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (266ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (76ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (458ms)
+				ProcessInitializeOnLoadMethodAttributes (81ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.98 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4245 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (1.1 MB). Loaded Objects now: 5020.
+Memory consumption went from 196.8 MB to 195.7 MB.
+Total: 5.060900 ms (FindLiveObjects: 0.458100 ms CreateObjectMapping: 0.122000 ms MarkObjects: 4.236700 ms  DeleteObjects: 0.242300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 61.149544 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+ -> (artifact id: 'ac058c0284d6d5e0af2f3d4040e93aae') in 0.207594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.188252 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c306e5dc754b2636efc48135b04719f4') in 0.015406 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.121095 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e454d2f4fbe35f956b2607a1fef07d63') in 0.013566 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.107064 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc3b74b624c72f1308b9d3f8ec199e39') in 0.013570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.263090 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd29d81159fe0615e4d2e84524716f5e9') in 0.012621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.340214 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '995b3e1a43dee9a96ab8c1ed5d4adbf1') in 0.013337 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.185561 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8b8fdafda46c0088af99ac63df302f3') in 0.012856 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.066627 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fde77fbddffb77715a90705ad7e87e8') in 0.012260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.867789 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '076034ff67f3fee2f5e248a0bea97450') in 0.013205 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.450935 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '450f4c745aa731c7d8434848bb538d16') in 0.012280 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.207184 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c26fd4ceac3512a9c90011c37e8f1e0d') in 0.013033 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.969878 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9377a332bde52c84cc95f034a7b51cc5') in 0.013156 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.271198 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d70bb81f82dfebceabd7fbd50c896c9') in 0.014097 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.710629 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4af7a55aa611641ffb7453456af34da9') in 0.013230 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.059707 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '269590ebc23d6230c4bd804e9397448e') in 0.012350 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.740541 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e03b2caade99f6e31f4267d710803dfb') in 0.012127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.458137 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da0fb8bf99dd692ad9841b9c860f705') in 0.013053 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.742991 seconds.
+  path: Assets/_Project/Mei/VFX/FX_IcePillar.prefab
+  artifactKey: Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/VFX/FX_IcePillar.prefab using Guid(8fdfb8980822b1140b206c22bda8ecf8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ca0a2654671dddc32a5b106c4091ca') in 0.012589 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006836 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.16 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.447 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1448ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1185ms)
+			LoadAssemblies (91ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (250ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (682ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (88ms)
+				ProcessInitializeOnLoadAttributes (460ms)
+				ProcessInitializeOnLoadMethodAttributes (106ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.17 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4245 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (1.1 MB). Loaded Objects now: 5074.
+Memory consumption went from 196.9 MB to 195.7 MB.
+Total: 5.314700 ms (FindLiveObjects: 0.490500 ms CreateObjectMapping: 0.134400 ms MarkObjects: 4.319500 ms  DeleteObjects: 0.368400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 385.622466 seconds.
+  path: Assets/PolygonParticleFX/Materials/FX_Plane_Particle.obj
+  artifactKey: Guid(30479c000e383a745bd05d57364b1f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/FX_Plane_Particle.obj using Guid(30479c000e383a745bd05d57364b1f61) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+Trying to get RenderBuffer with invalid antiAliasing (must be at least 1)
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit_Internal ()
+UnityEngine.Rendering.ScriptableRenderContext:Submit ()
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Rendering.Universal.CameraData,bool) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:430)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:RenderSingleCamera (UnityEngine.Rendering.ScriptableRenderContext,UnityEngine.Camera) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:323)
+UnityEngine.Rendering.Universal.UniversalRenderPipeline:Render (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>) (at Library/PackageCache/com.unity.render-pipelines.universal@12.1.4/Runtime/UniversalRenderPipeline.cs:278)
+UnityEngine.Rendering.RenderPipeline:InternalRender (UnityEngine.Rendering.ScriptableRenderContext,System.Collections.Generic.List`1<UnityEngine.Camera>)
+UnityEngine.Rendering.RenderPipelineManager:DoRenderLoop_Internal (UnityEngine.Rendering.RenderPipelineAsset,intptr,System.Collections.Generic.List`1<UnityEngine.Camera/RenderRequest>,Unity.Collections.LowLevel.Unsafe.AtomicSafetyHandle)
+UnityEditor.PreviewRenderUtility:Render (bool,bool)
+UnityEditor.GameObjectInspector:DoRenderPreview ()
+UnityEditor.GameObjectInspector:RenderStaticPreview (string,UnityEngine.Object[],int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreview (UnityEngine.Object,UnityEngine.Object[],string,int,int)
+UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityEngine.Object[],string)
+
+[C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
+
+ -> (artifact id: '439e015bd4ee8dceb0f706ab5ff8f175') in 0.250441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round_Multiply.mat
+  artifactKey: Guid(f9fa7768fbf327049884a40be125ebc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round_Multiply.mat using Guid(f9fa7768fbf327049884a40be125ebc5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'beaa723ca1bf30cf98969fc3ebafae21') in 0.060117 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Default.mat
+  artifactKey: Guid(0c6ceb865a050c64683892d8aa073844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Default.mat using Guid(0c6ceb865a050c64683892d8aa073844) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf49da8e5c64afbd5281a860d807ebf5') in 0.012913 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_GroundBreaking.mat
+  artifactKey: Guid(91fed33cc38deab4fbdb803e4f223fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_GroundBreaking.mat using Guid(91fed33cc38deab4fbdb803e4f223fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '334d17d836f84b4949304b7d41a87643') in 0.047559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Leaves.mat
+  artifactKey: Guid(1d6ce39015646794bb453e5b4e85f3ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Leaves.mat using Guid(1d6ce39015646794bb453e5b4e85f3ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32d950491eee2eabd5a98d452ca2988d') in 0.016302 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round_Dark.mat
+  artifactKey: Guid(819f0997b5a3d424bae37f31c7c24f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round_Dark.mat using Guid(819f0997b5a3d424bae37f31c7c24f28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f115aaed7d95f67caf6edff66364e6f') in 0.014064 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Shell.mat
+  artifactKey: Guid(70dcf2a0afa97b444aa4a54fe4ac2fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Shell.mat using Guid(70dcf2a0afa97b444aa4a54fe4ac2fbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10ed7c892a6bb9cd817760f28842595d') in 0.015790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Ice_02.mat
+  artifactKey: Guid(0fbfad6b062b1a84f9f585ef8cfed1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Ice_02.mat using Guid(0fbfad6b062b1a84f9f585ef8cfed1b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec8944b9ce4548334c3ee5d6b73e339f') in 1.261318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_LightRay_Cube.mat
+  artifactKey: Guid(e6d1b113ac12bfc45a46c2e5991e3eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_LightRay_Cube.mat using Guid(e6d1b113ac12bfc45a46c2e5991e3eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '552af76f1ee155e84b30ce216abc281c') in 0.038661 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Ice_01.mat
+  artifactKey: Guid(d4b280f132511204e807baef7817683d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Ice_01.mat using Guid(d4b280f132511204e807baef7817683d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '241ffe831aa1fafb33d7611454c7d947') in 0.015693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticles_Material_01_A.mat
+  artifactKey: Guid(82eb6f79a83225a4a9d4586b6fcea4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticles_Material_01_A.mat using Guid(82eb6f79a83225a4a9d4586b6fcea4f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ad5d3a0716692a451708da91ec8aec') in 0.022050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Smoke_Mat_05.mat
+  artifactKey: Guid(88dd2abb72819d143a867f0b74333037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Smoke_Mat_05.mat using Guid(88dd2abb72819d143a867f0b74333037) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b4805d7f913ab5f9133e7f180c4095e') in 0.014014 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Soft_Spot.mat
+  artifactKey: Guid(3bd0bff47a21f0b4089acd1d1b075bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Soft_Spot.mat using Guid(3bd0bff47a21f0b4089acd1d1b075bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e904a4ee6e6dcd80ad8b0f8234f625ee') in 0.015700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cloud.mat
+  artifactKey: Guid(f9a98fdfbba337d43bb545e357c48b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cloud.mat using Guid(f9a98fdfbba337d43bb545e357c48b98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c540bf135809ba74f52962e162501519') in 0.013930 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Sun_Beams.mat
+  artifactKey: Guid(17a4c6781d082ff4a94fd2985ec70739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Sun_Beams.mat using Guid(17a4c6781d082ff4a94fd2985ec70739) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e940ae2c0f9bddf1c19e4e403ea96717') in 0.014264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Circle.mat
+  artifactKey: Guid(f3053f8556ff7cf4fb59de5cf109104e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Circle.mat using Guid(f3053f8556ff7cf4fb59de5cf109104e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e157cb78ccdb5adf34c31233ee11785b') in 0.014056 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Wind.mat
+  artifactKey: Guid(34d1067f93566394e813f63c2f054f09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Wind.mat using Guid(34d1067f93566394e813f63c2f054f09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '682779c0f2df4b24ea285e7c9c348b2a') in 0.015284 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Rock_01.mat
+  artifactKey: Guid(52afa9e4bf9887a44aedbc2a547b658c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Rock_01.mat using Guid(52afa9e4bf9887a44aedbc2a547b658c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cdeade5561d64a492a4feb552935c5c') in 0.014183 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Swipe_Grid.mat
+  artifactKey: Guid(292c23ebfcf66194caae3b5650a6e98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Swipe_Grid.mat using Guid(292c23ebfcf66194caae3b5650a6e98b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '569179cde509df9ac7ebb0fc450cdce5') in 0.017453 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Leave.png
+  artifactKey: Guid(da01a20cc90345948b6eaae7ec14bf1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Leave.png using Guid(da01a20cc90345948b6eaae7ec14bf1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22b6a8d77db88685a2b5904f1a267bb2') in 0.055487 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round.mat
+  artifactKey: Guid(f55d44db4612b10438c11e63bc1ea9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round.mat using Guid(f55d44db4612b10438c11e63bc1ea9ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acf5627bc86dc413c9ff6ea3282e4157') in 0.012448 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_RitualCircle_01.mat
+  artifactKey: Guid(d3042a8a5e619204e89c65372c11ec64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_RitualCircle_01.mat using Guid(d3042a8a5e619204e89c65372c11ec64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '910df78bf2bb9091e396594277bb4bbc') in 0.043026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Rock_02.mat
+  artifactKey: Guid(c6f1ea5e8ec046f449aafa6978e4ac4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Rock_02.mat using Guid(c6f1ea5e8ec046f449aafa6978e4ac4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd53c2cf9a4d7c1e28b65d71d540f78') in 0.013017 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Wings_Grid.mat
+  artifactKey: Guid(ca8b896b1da14284ca29c35595cb750e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Wings_Grid.mat using Guid(ca8b896b1da14284ca29c35595cb750e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19e870e1b792278911c06d7b3ab5be95') in 0.014911 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticles_Material_01_B.mat
+  artifactKey: Guid(8488848242723b14e9895f302b43b949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticles_Material_01_B.mat using Guid(8488848242723b14e9895f302b43b949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efcf777f46ffb6dfc0247c676d39ca5c') in 0.015842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Sparkle 1.mat
+  artifactKey: Guid(75375bb6651b4c84995a0dbbc490cc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Sparkle 1.mat using Guid(75375bb6651b4c84995a0dbbc490cc11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4654d07f8f00a24d0faf1aebe82c4fac') in 0.014325 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Swipe_02.mat
+  artifactKey: Guid(413cbb0543875484fb2ad3f1d0a537de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Swipe_02.mat using Guid(413cbb0543875484fb2ad3f1d0a537de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd722f7f711087e8ff78aba8cfd5915e0') in 0.015163 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Bubble_01.mat
+  artifactKey: Guid(43e9d91ac8fd6f84f88ed89971c20f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Bubble_01.mat using Guid(43e9d91ac8fd6f84f88ed89971c20f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cfe965a5ee058182dee4a720c4abc65') in 0.014540 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round 1.mat
+  artifactKey: Guid(931f6cb81f32ff8418b581d210c8dd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Cutout_Round 1.mat using Guid(931f6cb81f32ff8418b581d210c8dd21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ee5065fc3b6d92ab8342272eb16b1a9') in 0.013692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Lightning.mat
+  artifactKey: Guid(f3491b5edbcb43640a86e7ff9cc63d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Lightning.mat using Guid(f3491b5edbcb43640a86e7ff9cc63d74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '508315e2114000750611d81bb005d677') in 0.014831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_HalfCircle.mat
+  artifactKey: Guid(98c2cb3a48b9fc849ae1b47e397eaece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_HalfCircle.mat using Guid(98c2cb3a48b9fc849ae1b47e397eaece) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8f87e8e1bdb8ffe09b9ec23eb7f4a4') in 0.015198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_VertexLitBlended_Light.mat
+  artifactKey: Guid(4bd4855edb749174180df19dc61807a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_VertexLitBlended_Light.mat using Guid(4bd4855edb749174180df19dc61807a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f0c0e750b35a43236d00bc12ca7c183') in 0.014354 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Portal_01.mat
+  artifactKey: Guid(63fe091b9b93bc24fb33ff7e92799835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Portal_01.mat using Guid(63fe091b9b93bc24fb33ff7e92799835) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a27ca015997304202e949624f8aa337') in 0.016023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Dark.mat
+  artifactKey: Guid(964f6345d4feb0347958244fe3c32cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Dark.mat using Guid(964f6345d4feb0347958244fe3c32cbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '409cead4e448efa65a9ca43697794850') in 1.105906 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Default_01.mat
+  artifactKey: Guid(417cbbf4755e392408e489080c4ede09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Default_01.mat using Guid(417cbbf4755e392408e489080c4ede09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a49a90af93ebbb3f7f19af892480fff8') in 0.011457 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Soft_Spot 1.mat
+  artifactKey: Guid(ada0702ac52956f4ba6ea382af4146b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Soft_Spot 1.mat using Guid(ada0702ac52956f4ba6ea382af4146b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a82765fd2af540c32dd1e5f4c0a2926b') in 0.016145 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticles_Material_01_C.mat
+  artifactKey: Guid(4f2936f284f9b574d8a56243f10d7db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticles_Material_01_C.mat using Guid(4f2936f284f9b574d8a56243f10d7db5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e031ec86a66b9238bdf7509982d551') in 0.015094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Empty.mat
+  artifactKey: Guid(0d02cd2cee6d0c548b6d6ee74d16e74b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Empty.mat using Guid(0d02cd2cee6d0c548b6d6ee74d16e74b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53937cd76f0b0573446376c8fd4154a4') in 0.014435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Emission.mat
+  artifactKey: Guid(11110f8b297fb5842984fab30e790888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Emission.mat using Guid(11110f8b297fb5842984fab30e790888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5baba1b378e874ee1e7a86bfe8a08f81') in 1.009736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.189352 seconds.
+  path: Assets/PolygonParticleFX/Materials/PolygonParticleFX_Dust 1.mat
+  artifactKey: Guid(efc6cb596dc59694e89becf64e0c463c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Materials/PolygonParticleFX_Dust 1.mat using Guid(efc6cb596dc59694e89becf64e0c463c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec07a60d13099bc9e08efd878c7d7a3') in 0.011812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.482834 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Wind.png
+  artifactKey: Guid(bdf00413f80cc3f48a0036afb20b48bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Wind.png using Guid(bdf00413f80cc3f48a0036afb20b48bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da865eea66d6ec918081cdc1bc7ee888') in 0.016943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Free Stylized Skybox/Panoramic/Textures/Sky_LowPoly_01_Day_a.png
+  artifactKey: Guid(b3453e84aa7d88a47a6b80b04864177c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Stylized Skybox/Panoramic/Textures/Sky_LowPoly_01_Day_a.png using Guid(b3453e84aa7d88a47a6b80b04864177c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70c6ad8a1e8e107400e99829204e1caf') in 0.152095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/StarterAssets/FirstPersonController/Scenes/Playground/ReflectionProbe-1.exr
+  artifactKey: Guid(5515cbebf3ef1144ebf8d50ed9091e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/FirstPersonController/Scenes/Playground/ReflectionProbe-1.exr using Guid(5515cbebf3ef1144ebf8d50ed9091e17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0d69653ab24b5ffe69c015ba5324896') in 0.062622 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000175 seconds.
+  path: Assets/Hovl Studio/Procedural fire/Textures/Trail67.png
+  artifactKey: Guid(c4f655f5d01f55547a23a546b58afd04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hovl Studio/Procedural fire/Textures/Trail67.png using Guid(c4f655f5d01f55547a23a546b58afd04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540eb3f8781f263f08a6fc7d304d22ed') in 0.017560 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/StarterAssets/TutorialInfo/Icons/ReadMeImg.PNG
+  artifactKey: Guid(44a17a5b205fcd349a24700e6f5615bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/TutorialInfo/Icons/ReadMeImg.PNG using Guid(44a17a5b205fcd349a24700e6f5615bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3f5c5f714f0eb2ae5e9793f793ef952') in 0.018973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/StarterAssets/Mobile/UI/UI_Icon_Look.png
+  artifactKey: Guid(af0ae2dbf3d1efb4f82af377950704a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Mobile/UI/UI_Icon_Look.png using Guid(af0ae2dbf3d1efb4f82af377950704a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626e74b83c211beb5de100473c647c6e') in 0.105093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/StarterAssets/Mobile/UI/UI_Circle_Bevel_Base.png
+  artifactKey: Guid(b74c31d447d2f5d41a61081bdf5e7126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Mobile/UI/UI_Circle_Bevel_Base.png using Guid(b74c31d447d2f5d41a61081bdf5e7126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '054e48a152a65d806a180b8188c3df09') in 0.074813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/StarterAssets/FirstPersonController/Scenes/Playground/ReflectionProbe-2.exr
+  artifactKey: Guid(c49ef192a57a5af42a728163b2468c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/FirstPersonController/Scenes/Playground/ReflectionProbe-2.exr using Guid(c49ef192a57a5af42a728163b2468c8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d36bff832e2c8c94315916aab70d8dc') in 0.022179 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/StarterAssets/Mobile/UI/UI_Icon_Sprint.png
+  artifactKey: Guid(b0fa70abd2a79904cb00b175dfd8ec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Mobile/UI/UI_Icon_Sprint.png using Guid(b0fa70abd2a79904cb00b175dfd8ec7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5deeb3eae5272fcf01f78ec98a8e848a') in 0.068502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Free Stylized Skybox/CubeMap/Textures/Sky_LowPoly_01_Day_a.png
+  artifactKey: Guid(15941f70fce71784da1321794120ea6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Stylized Skybox/CubeMap/Textures/Sky_LowPoly_01_Day_a.png using Guid(15941f70fce71784da1321794120ea6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c48f50acbd2ba0b420754fbade30e1d') in 0.383693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.537953 seconds.
+  path: Assets/_Project/Models/Mei/Ice_Pillar/Textures/00000001C317.tif
+  artifactKey: Guid(4376c48c26791344c96a35186a1d4164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Mei/Ice_Pillar/Textures/00000001C317.tif using Guid(4376c48c26791344c96a35186a1d4164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37476647a3863c674081bdfb15407d6f') in 0.018657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/_Project/Models/Junkrat/Mine/Textures/mine_low1_lambert3_Metallic.png
+  artifactKey: Guid(050d9d86540d89444b4d22d4a9230bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Junkrat/Mine/Textures/mine_low1_lambert3_Metallic.png using Guid(050d9d86540d89444b4d22d4a9230bc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40916efc64a6464ccc8e002dbfa65054') in 0.017234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/StarterAssets/Environment/Art/Textures/Grid_01_Emissive.png
+  artifactKey: Guid(d4d6919451fe3e24388816386a6d15a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterAssets/Environment/Art/Textures/Grid_01_Emissive.png using Guid(d4d6919451fe3e24388816386a6d15a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f186d0e9412931c3aa61c65801892b83') in 0.013181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/_Project/Textures/Ability_Background_Center.png
+  artifactKey: Guid(9a48e4c8be80bc14a88e7dd026d1cb99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Textures/Ability_Background_Center.png using Guid(9a48e4c8be80bc14a88e7dd026d1cb99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84be53a113a1453527ba703ed4057092') in 0.018430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/_Project/Models/Junkrat/GrenadeLauncher/Textures/Grenade_Launcher_Roughness.png
+  artifactKey: Guid(74887b57a308f334bb17f990ecb4f575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Junkrat/GrenadeLauncher/Textures/Grenade_Launcher_Roughness.png using Guid(74887b57a308f334bb17f990ecb4f575) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bf33469176241cbe35aea41ca99a86c7') in 0.014670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/_Project/Junkrat/Textures/Mine_Icon.png
+  artifactKey: Guid(d967a5e75bd755b4d8f4adfc20539f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Junkrat/Textures/Mine_Icon.png using Guid(d967a5e75bd755b4d8f4adfc20539f5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b74a405d87d2a39a594d4a1b99e564bd') in 0.017498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/_Project/Models/Mei/Ice_Pillar/Textures/00000002A3F4.tif
+  artifactKey: Guid(e36c3cd4e14431f45ac581c2e7086093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Mei/Ice_Pillar/Textures/00000002A3F4.tif using Guid(e36c3cd4e14431f45ac581c2e7086093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2550389096faf2a3fecb65a9234bb2d5') in 0.012739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/_Project/Mei/Textures/IceWall_Icon_Mei.tif
+  artifactKey: Guid(c0c8c54d141d9a045b586c9de8c30164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/Textures/IceWall_Icon_Mei.tif using Guid(c0c8c54d141d9a045b586c9de8c30164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b7ddf7dbb8a48a1bf0b1511f9234a31') in 0.015597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/_Project/Fonts/BebasNeue-Bold SDF.asset
+  artifactKey: Guid(4f7ca95eccba67145ae2f37adfe71373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Fonts/BebasNeue-Bold SDF.asset using Guid(4f7ca95eccba67145ae2f37adfe71373) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2002a42abf1a728e209bf0b4573ca0a4') in 0.078044 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/_Project/Textures/Ability_Background_Icon.png
+  artifactKey: Guid(73e47dddd68360441be58d633405e1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Textures/Ability_Background_Icon.png using Guid(73e47dddd68360441be58d633405e1c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9157d3f5d315b0d4feb17a4974a98e12') in 0.024586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/_Project/Fonts/BebasNeue-Bold_TMP.asset
+  artifactKey: Guid(662f5b18c24020847a0ebc401384dfc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Fonts/BebasNeue-Bold_TMP.asset using Guid(662f5b18c24020847a0ebc401384dfc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93e16bbe952c3f1cbc64da47bc309436') in 0.050772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/_Project/Models/Junkrat/Mine/Textures/mine_low1_lambert3_BaseColor.png
+  artifactKey: Guid(5c1c3b4365cc23442a9a026cd7d13b89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Junkrat/Mine/Textures/mine_low1_lambert3_BaseColor.png using Guid(5c1c3b4365cc23442a9a026cd7d13b89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2047b108dd04d2649fcc0c242643d118') in 0.016147 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/_Project/Junkrat/Textures/LightningBolt_1.png
+  artifactKey: Guid(d469a8daa58aea24d9b35d775628ea3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Junkrat/Textures/LightningBolt_1.png using Guid(d469a8daa58aea24d9b35d775628ea3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9f2a9ee27fd8671b6a5246233fb43a8') in 0.027172 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/_Project/Mei/Textures/EndothermicBlaster_Icon_Mei.tif
+  artifactKey: Guid(73ea323e96f82d8419813fe5dbe65162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/Textures/EndothermicBlaster_Icon_Mei.tif using Guid(73ea323e96f82d8419813fe5dbe65162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b26a6068167410d52838af2867d69775') in 0.022965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/_Project/Models/Mei/Ice_Pillar/Textures/8000D0B8829F.tif
+  artifactKey: Guid(732ff9a3627217e4b896fcd49c8da5c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Mei/Ice_Pillar/Textures/8000D0B8829F.tif using Guid(732ff9a3627217e4b896fcd49c8da5c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12f293411793eb5099cc9db95f848d5c') in 0.014412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/_Project/Models/Mei/Ice_Pillar/Textures/00000001C839.tif
+  artifactKey: Guid(7f12f0026b68c004d9c5b589c2536a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Models/Mei/Ice_Pillar/Textures/00000001C839.tif using Guid(7f12f0026b68c004d9c5b589c2536a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8f9976568262140de6bfc1b49bcabd2') in 0.015296 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 176.996301 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Circle_01.png
+  artifactKey: Guid(7cc0b541520b0734c80ea6934a192675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Circle_01.png using Guid(7cc0b541520b0734c80ea6934a192675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '774ff7ffbd2514e392dafde73b802038') in 0.011647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Portal_Single_Chipped.png
+  artifactKey: Guid(8a4b0e610ec24c44aaf3f934e7ab1392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Portal_Single_Chipped.png using Guid(8a4b0e610ec24c44aaf3f934e7ab1392) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d8d4e3f3397211907160770e072de89') in 0.012638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Hexagon.png
+  artifactKey: Guid(9b13fd76834a28c4fa9ea626ba446015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Hexagon.png using Guid(9b13fd76834a28c4fa9ea626ba446015) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbd69f7024d5aefd00087ac84217d930') in 0.011842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Fumes_04.png
+  artifactKey: Guid(2eb84df899ad7fc4aa3b987e587d5fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Fumes_04.png using Guid(2eb84df899ad7fc4aa3b987e587d5fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8132c603e9900f8e109b6c5f909e2b8c') in 0.012401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Circle_Dark_01.png
+  artifactKey: Guid(913d37094a541b842b4f18f393f40ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Circle_Dark_01.png using Guid(913d37094a541b842b4f18f393f40ecb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2feaa4f30ad5e12f74dd4b23df8cb18a') in 0.010779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Smoke_01.png
+  artifactKey: Guid(608b0bba5c9806149ae5d24a33c606de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Smoke_01.png using Guid(608b0bba5c9806149ae5d24a33c606de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96377007e330aeebcf97ea49c0b48996') in 0.011933 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Texture_01_A.png
+  artifactKey: Guid(67cb44fbdc202b44e971ac2b57d5ee35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Texture_01_A.png using Guid(67cb44fbdc202b44e971ac2b57d5ee35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '661cfffd8121e1bb1ab5aa4e1775bcd8') in 0.013269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_RainbowCircle.png
+  artifactKey: Guid(b9f7df66400b4354b98f61c735542521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_RainbowCircle.png using Guid(b9f7df66400b4354b98f61c735542521) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8498de296b264944556ed37a12d06d5') in 0.012408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_RitualCircle_01.png
+  artifactKey: Guid(a0b77b3cfe92a174e82c48936951c8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_RitualCircle_01.png using Guid(a0b77b3cfe92a174e82c48936951c8f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3575913052e1edaeacbb1aaabd2c9e4') in 0.013618 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Soft_Spot_Dark.png
+  artifactKey: Guid(c8660b4dcd717b846900ad32c22a9162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Soft_Spot_Dark.png using Guid(c8660b4dcd717b846900ad32c22a9162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf368067c4135dce57f52bd5403af92') in 0.011598 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_SemiCircle.png
+  artifactKey: Guid(f07e4b81cfc00d24e88a4b58da56db3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_SemiCircle.png using Guid(f07e4b81cfc00d24e88a4b58da56db3e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36a4c4fd660f930fba052eb25847dcf5') in 0.011249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.470295 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_Bubble.png
+  artifactKey: Guid(60847f2556c444a438e138e034f0ae83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_Bubble.png using Guid(60847f2556c444a438e138e034f0ae83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01508aef6ed46da1b77e03e609e8d865') in 0.012430 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/PolygonParticleFX/Textures/PolygonParticles_BulletTrail.png
+  artifactKey: Guid(03f9cd753cdaef945b4cefdcda283901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/PolygonParticleFX/Textures/PolygonParticles_BulletTrail.png using Guid(03f9cd753cdaef945b4cefdcda283901) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90fe2969d069bca06c25ca773f6c1914') in 0.010732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.090868 seconds.
+  path: Assets/_Project/Textures/NumberOne_Icon.png
+  artifactKey: Guid(a32b5f72ef0a4d346b507f2c6aa6980e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Textures/NumberOne_Icon.png using Guid(a32b5f72ef0a4d346b507f2c6aa6980e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9f6a11d876d5097678318e0157ec4ac') in 0.017861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 140.248768 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c37169af060324ab1b2f514aa9c1945') in 0.003699 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006532 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.97 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.106 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2106ms)
+		BeginReloadAssembly (166ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1832ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (240ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (771ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (21ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (115ms)
+				ProcessInitializeOnLoadAttributes (537ms)
+				ProcessInitializeOnLoadMethodAttributes (86ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.94 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4286 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (1.1 MB). Loaded Objects now: 5806.
+Memory consumption went from 344.8 MB to 343.7 MB.
+Total: 6.131600 ms (FindLiveObjects: 0.595200 ms CreateObjectMapping: 0.161000 ms MarkObjects: 4.953100 ms  DeleteObjects: 0.420000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007447 seconds.
+Begin MonoManager ReloadAssembly
+
+=================================================================
+	Native Crash Reporting
+=================================================================
+Got a UNKNOWN while executing native code. This usually indicates
+a fatal error in the mono runtime or one of the native libraries 
+used by your application.
+=================================================================
+
+=================================================================
+	Managed Stacktrace:
+=================================================================
+=================================================================
+Received signal SIGSEGV
+Obtained 2 stack frames
+RtlLookupFunctionEntry returned NULL function. Aborting stack walk.
+<Missing stacktrace information>
+
