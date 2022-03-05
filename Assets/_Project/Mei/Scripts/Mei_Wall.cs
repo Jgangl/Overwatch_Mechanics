@@ -142,7 +142,11 @@ public class Mei_Wall : MonoBehaviour
         
         OnWallTimeout?.Invoke();
 
-        GameObject wallBreakParticles = Instantiate(_breakParticles, transform.position + _breakParticlesOffset, Quaternion.identity);
+        Vector3 particlesRotation = _breakParticles.transform.rotation.eulerAngles;
+        
+        Vector3 particleRotation = new Vector3(particlesRotation.x, particlesRotation.y, transform.rotation.eulerAngles.y);
+
+        GameObject wallBreakParticles = Instantiate(_breakParticles, transform.position + _breakParticlesOffset, Quaternion.Euler(particleRotation));
         Destroy(wallBreakParticles, 5f);
     }
 
