@@ -4310,3 +4310,15 @@ UnityEditor.AssetPreviewUpdater:CreatePreviewForAsset (UnityEngine.Object,UnityE
 [C:\buildslave\unity\build\Runtime\Graphics\RenderBufferManager.cpp line 180]
 
  -> (artifact id: '9f1859c18e0a47000a7334b3754e8d43') in 0.304646 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 733.882475 seconds.
+  path: Assets/_Project/Mei/Textures/Paint_Splatter_02.png
+  artifactKey: Guid(e7d4b2fa39aba08479cd4c8ac830adb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/Textures/Paint_Splatter_02.png using Guid(e7d4b2fa39aba08479cd4c8ac830adb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6069709961a807b5cd28a59869dfa159') in 0.030264 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.846042 seconds.
+  path: Assets/_Project/Mei/Textures/Paint_Splatter_02.png
+  artifactKey: Guid(e7d4b2fa39aba08479cd4c8ac830adb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Project/Mei/Textures/Paint_Splatter_02.png using Guid(e7d4b2fa39aba08479cd4c8ac830adb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5ba8dbe1afe9fcddb499cca4499fce1') in 0.013025 seconds 
