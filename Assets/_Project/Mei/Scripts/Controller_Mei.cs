@@ -29,6 +29,9 @@ public class Controller_Mei : MonoBehaviour
     [SerializeField] private Mei_Wall _wallPrefab;
     [SerializeField] private float _wallDistance = 30f;
     [SerializeField] private LayerMask _wallMask;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioSource _iceWallErrorSource;
     private Mei_Wall _meiWall;
 
     private Coroutine _wallRechargeTimer;
@@ -106,7 +109,12 @@ public class Controller_Mei : MonoBehaviour
 
     void TryBuildWall()
     {
-        if (!_canBuildWall) return;
+        if (!_canBuildWall)
+        {
+            // Play error sound
+            _iceWallErrorSource.Play();
+            return;
+        }
         
         if (!_buildingWall)
         {
