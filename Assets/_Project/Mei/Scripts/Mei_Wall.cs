@@ -18,6 +18,26 @@ public class Mei_Wall : MonoBehaviour
     [SerializeField] private ParticleSystem[] _frostParticles;
     [SerializeField] private ParticleSystem[] _ghostSnowParticles;
 
+    [Space(5)]
+    
+    [Header("Audio")]
+    //[SerializeField] private AudioClip _iceWallStartBuildClip;
+    //[SerializeField] private AudioClip _iceWallStartPreBuildClip;
+    //[SerializeField] private AudioClip _iceWallBreakClip;
+    //[SerializeField] private AudioClip _iceWallPreBreakClip;
+    //[SerializeField] private AudioClip _iceWallRotateClip;
+    //[SerializeField] private AudioClip _iceWallWindClip;
+    //[SerializeField] private AudioClip _iceWallErrorClip;
+    
+    [Space(5)]
+    
+    [SerializeField] private AudioSource _iceWallStartBuildSource;
+    [SerializeField] private AudioSource _iceWallStartPreBuildSource;
+    [SerializeField] private AudioSource _iceWallBreakSource;
+    [SerializeField] private AudioSource _iceWallPreBreakSource;
+    [SerializeField] private AudioSource _iceWallRotateSource;
+    [SerializeField] private AudioSource _iceWallWindSource;
+
     private MeshRenderer[] _meshRenderers;
     private Collider[] _colliders;
     private Rigidbody _rb;
@@ -63,6 +83,9 @@ public class Mei_Wall : MonoBehaviour
         StartCoroutine(BuildWallCoroutine());
         
         OnStartWallBuild?.Invoke();
+        
+        _iceWallWindSource.Stop();
+        _iceWallStartBuildSource.Play();
     }
 
     IEnumerator BuildWallCoroutine()
@@ -112,6 +135,9 @@ public class Mei_Wall : MonoBehaviour
         EnableColliders(false);
         
         OnStopGhostWallBuild?.Invoke();
+        
+        _iceWallStartPreBuildSource.Stop();
+        _iceWallWindSource.Stop();
     }
 
     public void StartGhostBuild()
@@ -127,6 +153,9 @@ public class Mei_Wall : MonoBehaviour
         transform.localScale = new Vector3(transform.localScale.x, _wallMinScale, transform.localScale.z);
         
         OnStartGhostWallBuild?.Invoke();
+        
+        _iceWallStartPreBuildSource.Play();
+        _iceWallWindSource.Play();
         
         // Show Particles where wall will show up
     }
@@ -148,6 +177,8 @@ public class Mei_Wall : MonoBehaviour
 
         GameObject wallBreakParticles = Instantiate(_breakParticles, transform.position + _breakParticlesOffset, Quaternion.Euler(particleRotation));
         Destroy(wallBreakParticles, 5f);
+        
+        _iceWallBreakSource.Play();
     }
 
     public void EnableWall()
@@ -165,6 +196,8 @@ public class Mei_Wall : MonoBehaviour
     public void RotateWall()
     {
         _wallRotated = !_wallRotated;
+        _iceWallRotateSource.Stop();
+        _iceWallRotateSource.Play();
     }
 
     public void SetWallPosition(Vector3 pos)
