@@ -45,7 +45,7 @@ public class Controller_Mei : MonoBehaviour
     private void Awake()
     {
         _charController = GetComponent<CharacterController>();
-        _gunCamera = GameObject.FindGameObjectWithTag("GunCamera").GetComponent<Camera>();
+        //_gunCamera = GameObject.FindGameObjectWithTag("GunCamera")?.GetComponent<Camera>();
         _mainCamera = Camera.main;
         
         _meiWall = Instantiate(_wallPrefab, Vector3.zero, Quaternion.identity);
