@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6147544794172806303}
   - component: {fileID: 8756052559702117092}
   - component: {fileID: 75440063693452484}
-  - component: {fileID: 8323438811988178412}
   m_Layer: 0
   m_Name: Frost
   m_TagString: Untagged
@@ -99,18 +98,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &8323438811988178412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1100050524684045643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4816e715702eb95428042b8ad178ee0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1600390909310826408
 GameObject:
   m_ObjectHideFlags: 0

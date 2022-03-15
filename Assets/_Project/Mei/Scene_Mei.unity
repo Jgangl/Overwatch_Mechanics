@@ -179,6 +179,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7288937020412082797, guid: 176f0c0b579a93b43b0cb8a85ab2bb1f, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b194ddd434ac91d4bab2ba92d6f5e30d, type: 3}
     - target: {fileID: 8029056790997530790, guid: 176f0c0b579a93b43b0cb8a85ab2bb1f, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -246,6 +250,10 @@ PrefabInstance:
     - target: {fileID: 8744103238899311959, guid: 176f0c0b579a93b43b0cb8a85ab2bb1f, type: 3}
       propertyPath: m_Name
       value: IceWall
+      objectReference: {fileID: 0}
+    - target: {fileID: 8744103238899311959, guid: 176f0c0b579a93b43b0cb8a85ab2bb1f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8874506658659048956, guid: 176f0c0b579a93b43b0cb8a85ab2bb1f, type: 3}
       propertyPath: m_IsActive
